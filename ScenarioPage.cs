@@ -44,11 +44,10 @@ namespace HackKSU2025
         }
         public static void RetrieveStartingPrompt()
         {
-            string filePath = @"C:\Users\bahab\source\repos\HackKSU2025\Data\InitialPrompt.txt";
-            string wordFilterPromptPath = @"C:\Users\bahab\source\repos\HackKSU2025\Data\WordFlagPrompt.txt";
+            string filePath = Path.Combine(AppContext.BaseDirectory, "Data", "InitialPrompt.txt");
+            string wordFilterPromptPath = Path.Combine(AppContext.BaseDirectory, "Data", "WordFlagPrompt.txt");
             startingPrompt = File.ReadAllText(filePath);
             wordFilterPrompt = File.ReadAllText(wordFilterPromptPath);
-
         }
         private void InitializeToolTip()
         {
