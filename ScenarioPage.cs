@@ -74,9 +74,9 @@ namespace HackKSU2025
         {
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
             uxMessageBox.AppendText("");
-            uxMessageBox.AppendText(text+"\n");
+            uxMessageBox.AppendText(text + "\n");
         }
-        
+
 
         private List<(int start, int length, string reason)> harmfulWordHighlights = new();
 
@@ -158,6 +158,24 @@ namespace HackKSU2025
         public void StopWaitAI()
         {
             uxSpinner.Visible = false;
+        }
+
+        private void uxBackClick(object sender, EventArgs e)
+        {
+            MainForm? main = this.FindForm() as MainForm;
+            if (main != null)
+            {
+                main.LoadPage(new MenuPage());
+            }
+        }
+
+        private void uxNew_Click(object sender, EventArgs e)
+        {
+            MainForm? main = this.FindForm() as MainForm;
+            if (main != null)
+            {
+                main.LoadPage(new ScenarioPage(ScenarioType.Parent));
+            }
         }
     }
 }
