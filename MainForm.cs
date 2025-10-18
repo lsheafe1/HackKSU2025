@@ -9,7 +9,7 @@ namespace HackKSU2025
             InitializeComponent();
             LoadPage(new MenuPage());
             ScenarioPage.RetrieveStartingPrompt();
-            ElevenLabsService.Transcribe();
+            //ElevenLabsService.Transcribe();
         }
         public void LoadPage(UserControl page)
         {

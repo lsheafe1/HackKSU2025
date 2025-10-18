@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -36,7 +37,6 @@ public class ScenarioManager
         else
         {
             jsonPath = Path.Combine(AppContext.BaseDirectory, "Data", "InitialPrompt.txt");
-
         }
         if (!File.Exists(jsonPath))
             throw new FileNotFoundException($"Scenario file not found: {jsonPath}");

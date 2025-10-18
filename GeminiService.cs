@@ -14,6 +14,7 @@ public class GeminiService
 {
     GoogleAi googleAI;
     GenerativeModel model;
+    GenerativeModel wordsModel;
     ChatSession chatSession;
     ScenarioPage scenarioPage;
 
@@ -25,9 +26,13 @@ public class GeminiService
                   ?? throw new Exception("Set GEMINI_API_KEY environment variable");
         googleAI = new GoogleAi(_apiKey);
 
-        model = googleAI.CreateGenerativeModel("models/gemini-2.5-flash", new GenerationConfig
+        model = googleAI.CreateGenerativeModel("models/gemini-2.5-flash-lite", new GenerationConfig
         {
-            Temperature = 1.6f
+            Temperature = 1f
+        });
+        wordsModel = googleAI.CreateGenerativeModel("models/gemini-2.5-flash", new GenerationConfig
+        {
+            Temperature = 1f
         });
         chatSession = model.StartChat();
 
@@ -49,12 +54,29 @@ public class GeminiService
             return null!;
         }
     }
+    public async Task<bool> CheckGoal(string prompt)
+    {
+        try
+        {
+            scenarioPage.WaitAI();
+            var response = await chatSession.GenerateContentAsync(prompt);
+            scenarioPage.StopWaitAI();
+
+            return bool.Parse(response.Text);
+
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+    }
     public async Task<string> GenerateMessage(string prompt)
     {
         try
         {
             scenarioPage.WaitAI();
-            var response = await model.GenerateContentAsync(prompt);
+            var response = await wordsModel.GenerateContentAsync(prompt);
             chatSession.History.ToString();
             scenarioPage.StopWaitAI();
 

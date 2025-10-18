@@ -30,6 +30,7 @@ namespace HackKSU2025
         GeminiService gemini;
         static string startingPrompt;
         static string wordFilterPrompt;
+        static string goalPrompt;
         ScenarioManager scenarioManager;
 
 
@@ -43,8 +44,10 @@ namespace HackKSU2025
         {
             string filePath = Path.Combine(AppContext.BaseDirectory, "Data", "InitialPrompt.txt");
             string wordFilterPromptPath = Path.Combine(AppContext.BaseDirectory, "Data", "WordFlagPrompt.txt");
+            string goalPath = Path.Combine(AppContext.BaseDirectory, "Data", "GoalPrompt.txt");
             startingPrompt = File.ReadAllText(filePath);
             wordFilterPrompt = File.ReadAllText(wordFilterPromptPath);
+            goalPrompt = File.ReadAllText(goalPath);
         }
         private void InitializeToolTip()
         {
@@ -69,9 +72,10 @@ namespace HackKSU2025
         }
         public void AppendAIMessage(string text)
         {
-            uxMessageBox.SelectionAlignment = HorizontalAlignment.Right;
+            uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
             uxMessageBox.AppendText("AI: ");
-            uxMessageBox.AppendText(text);
+            uxMessageBox.AppendText(text +"\n");
+            //CheckGoal();
         }
         public void AppendStartingMessage(string text)
         {
@@ -110,9 +114,13 @@ namespace HackKSU2025
                 uxMessageBox.AppendText(word + " ");
             }
 
-            uxMessageBox.AppendText("\r\n"); // Newline at end of message
+            uxMessageBox.AppendText("\n"); // Newline at end of message
             uxMessageBox.SelectionStart = uxMessageBox.TextLength;
             uxMessageBox.ScrollToCaret();
+            foreach(var dic in harmfulWordsWithReason)
+            {
+                Debug.WriteLine(dic.Key);
+            }
         }
         private async Task<Dictionary<string, string>> GetHarmfulWords(string text)
         {
@@ -152,7 +160,9 @@ namespace HackKSU2025
         }
         private async void UserInput()
         {
+            string str = await gemini.GenerateChatMessage(uxUserText.Text);
             AppendUserMessage(uxUserText.Text, await GetHarmfulWords(uxUserText.Text));
+            AppendAIMessage(str);
         }
         public void WaitAI()
         {
@@ -181,6 +191,14 @@ namespace HackKSU2025
         private async void ScenarioPageLoad(object sender, EventArgs e)
         {
             await InternetChecker.EnsureInternetAsync();
+        }
+        private async void CheckGoal()
+        {
+            bool goal = await gemini.CheckGoal(goalPrompt);
+            if (goal)
+            {
+                MessageBox.Show("Goal achieved!");
+            }
         }
     }
 }
