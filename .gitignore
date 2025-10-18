@@ -53,3 +53,23 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 *.vsidx
+
+
+# Visual Studio user settings and cache
+.vs/
+*.user
+*.suo
+
+# Build folders
+bin/
+obj/
+
+# Publish output
+*.Publish.xml
+
+# Backup and logs
+*.log
+*.tmp
+
+# IDE-specific stuff
+*.dbmdl
