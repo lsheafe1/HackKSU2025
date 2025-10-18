@@ -60,9 +60,6 @@ nunit-*.xml
 *.user
 *.suo
 
-# Build folders
-bin/
-obj/
 
 # Publish output
 *.Publish.xml
