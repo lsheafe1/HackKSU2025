@@ -3,8 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\scenariopage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:scenariopage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\hackksu2025.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:hackksu2025.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\scenariopage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:scenariopage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\scenariopage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:scenariopage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\menupage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:menupage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|C:\\Users\\bahab\\source\\repos\\HackKSU2025\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|c:\\users\\bahab\\source\\repos\\hackksu2025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|C:\\Users\\bahab\\source\\repos\\HackKSU2025\\menupage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C9D88E6F-EDC0-49E1-94AF-F0EB3A84CECB}|HackKSU2025.csproj|solutionrelative:menupage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,16 +58,155 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ScenarioPage.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\ScenarioPage.Designer.cs",
+              "RelativeDocumentMoniker": "ScenarioPage.Designer.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\ScenarioPage.Designer.cs",
+              "RelativeToolTip": "ScenarioPage.Designer.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAWwHYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T07:00:25.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\Properties\\Resources.resx",
+              "RelativeToolTip": "Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-10-18T06:58:06.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HackKSU2025",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\HackKSU2025.csproj",
+              "RelativeDocumentMoniker": "HackKSU2025.csproj",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\HackKSU2025.csproj",
+              "RelativeToolTip": "HackKSU2025.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-18T06:57:55.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GeminiService.cs",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\GeminiService.cs",
+              "RelativeDocumentMoniker": "GeminiService.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\GeminiService.cs",
+              "RelativeToolTip": "GeminiService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T05:02:44.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "README.txt",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\README.txt",
+              "RelativeDocumentMoniker": "README.txt",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\README.txt",
+              "RelativeToolTip": "README.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-18T05:01:41.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "Title": "ScenarioPage.cs",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\ScenarioPage.cs",
+              "RelativeDocumentMoniker": "ScenarioPage.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\ScenarioPage.cs",
+              "RelativeToolTip": "ScenarioPage.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswDsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T03:18:41.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T03:17:00.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MenuPage.cs",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\MenuPage.cs",
+              "RelativeDocumentMoniker": "MenuPage.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\MenuPage.cs",
+              "RelativeToolTip": "MenuPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T03:16:17.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ScenarioPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\ScenarioPage.cs",
+              "RelativeDocumentMoniker": "ScenarioPage.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\ScenarioPage.cs [Design]",
+              "RelativeToolTip": "ScenarioPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T03:09:09.919Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MenuPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\MenuPage.cs",
+              "RelativeDocumentMoniker": "MenuPage.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\MenuPage.cs [Design]",
+              "RelativeToolTip": "MenuPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T02:12:10.209Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T02:10:26.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\bahab\\source\\repos\\HackKSU2025\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T01:49:48.68Z",
               "EditorCaption": " [Design]"
