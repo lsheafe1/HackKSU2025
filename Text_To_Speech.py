@@ -26,7 +26,7 @@ transcription = elevenlabs.speech_to_text.convert(
 )
 
 print(os.environ.get('ELEVENLABS_API_KEY'))
-#print(transcription)
+print(transcription)
 
 
 
