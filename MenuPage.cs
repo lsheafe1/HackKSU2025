@@ -24,8 +24,7 @@ namespace HackKSU2025
             {
                 main.LoadPage(new ScenarioPage(ScenarioType.Parent));
             }
-
-
         }
+
     }
 }

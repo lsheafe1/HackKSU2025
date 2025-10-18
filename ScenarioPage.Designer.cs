@@ -48,10 +48,10 @@
             uxButtonContainer.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             uxButtonContainer.Controls.Add(uxBack);
             uxButtonContainer.Controls.Add(uxNew);
-            uxButtonContainer.Location = new Point(31, 23);
-            uxButtonContainer.Margin = new Padding(4, 167, 4, 5);
+            uxButtonContainer.Location = new Point(22, 14);
+            uxButtonContainer.Margin = new Padding(3, 100, 3, 3);
             uxButtonContainer.Name = "uxButtonContainer";
-            uxButtonContainer.Size = new Size(321, 98);
+            uxButtonContainer.Size = new Size(224, 65);
             uxButtonContainer.TabIndex = 2;
             // 
             // uxBack
@@ -63,10 +63,10 @@
             uxBack.FlatStyle = FlatStyle.Flat;
             uxBack.Font = new Font("Microsoft Sans Serif", 21.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxBack.ForeColor = Color.Azure;
-            uxBack.Location = new Point(14, 17);
-            uxBack.Margin = new Padding(14, 17, 14, 17);
+            uxBack.Location = new Point(10, 10);
+            uxBack.Margin = new Padding(10, 10, 10, 10);
             uxBack.Name = "uxBack";
-            uxBack.Size = new Size(143, 64);
+            uxBack.Size = new Size(99, 45);
             uxBack.TabIndex = 0;
             uxBack.Text = "Menu";
             uxBack.UseVisualStyleBackColor = false;
@@ -81,25 +81,24 @@
             uxNew.FlatStyle = FlatStyle.Flat;
             uxNew.Font = new Font("Microsoft Sans Serif", 21.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxNew.ForeColor = Color.Azure;
-            uxNew.Location = new Point(185, 17);
-            uxNew.Margin = new Padding(14, 17, 14, 17);
+            uxNew.Location = new Point(129, 10);
+            uxNew.Margin = new Padding(10, 10, 10, 10);
             uxNew.Name = "uxNew";
-            uxNew.Size = new Size(122, 64);
+            uxNew.Size = new Size(85, 45);
             uxNew.TabIndex = 1;
             uxNew.Text = "New";
             uxNew.UseVisualStyleBackColor = false;
-            uxNew.Click += uxNew_Click;
+            uxNew.Click += uxNewClick;
             // 
             // uxMessageBox
             // 
             uxMessageBox.BackColor = Color.Linen;
             uxMessageBox.BorderStyle = BorderStyle.FixedSingle;
             uxMessageBox.Font = new Font("Microsoft Sans Serif", 14.25F);
-            uxMessageBox.Location = new Point(29, 170);
-            uxMessageBox.Margin = new Padding(4, 5, 4, 5);
+            uxMessageBox.Location = new Point(20, 102);
             uxMessageBox.Name = "uxMessageBox";
             uxMessageBox.ReadOnly = true;
-            uxMessageBox.Size = new Size(1405, 481);
+            uxMessageBox.Size = new Size(985, 290);
             uxMessageBox.TabIndex = 3;
             uxMessageBox.Text = "";
             uxMessageBox.MouseMove += uxMouseMove;
@@ -113,29 +112,26 @@
             uxScenarioContainer.Controls.Add(uxMessageBox);
             uxScenarioContainer.Dock = DockStyle.Fill;
             uxScenarioContainer.Location = new Point(0, 0);
-            uxScenarioContainer.Margin = new Padding(4, 5, 4, 5);
             uxScenarioContainer.Name = "uxScenarioContainer";
-            uxScenarioContainer.Size = new Size(1463, 1280);
+            uxScenarioContainer.Size = new Size(1024, 768);
             uxScenarioContainer.TabIndex = 4;
             // 
             // uxSpinner
             // 
             uxSpinner.BackColor = Color.Linen;
             uxSpinner.Image = (Image)resources.GetObject("uxSpinner.Image");
-            uxSpinner.Location = new Point(29, 540);
-            uxSpinner.Margin = new Padding(4, 5, 4, 5);
+            uxSpinner.Location = new Point(20, 324);
             uxSpinner.Name = "uxSpinner";
-            uxSpinner.Size = new Size(77, 115);
+            uxSpinner.Size = new Size(54, 69);
             uxSpinner.SizeMode = PictureBoxSizeMode.Zoom;
             uxSpinner.TabIndex = 6;
             uxSpinner.TabStop = false;
             // 
             // uxSendButton
             // 
-            uxSendButton.Location = new Point(1317, 565);
-            uxSendButton.Margin = new Padding(4, 5, 4, 5);
+            uxSendButton.Location = new Point(922, 339);
             uxSendButton.Name = "uxSendButton";
-            uxSendButton.Size = new Size(113, 88);
+            uxSendButton.Size = new Size(79, 53);
             uxSendButton.TabIndex = 5;
             uxSendButton.Text = "Send";
             uxSendButton.UseVisualStyleBackColor = true;
@@ -144,23 +140,22 @@
             // uxUserText
             // 
             uxUserText.BorderStyle = BorderStyle.FixedSingle;
-            uxUserText.Location = new Point(740, 567);
-            uxUserText.Margin = new Padding(4, 5, 4, 5);
+            uxUserText.Location = new Point(518, 340);
             uxUserText.Multiline = true;
             uxUserText.Name = "uxUserText";
-            uxUserText.Size = new Size(575, 87);
+            uxUserText.Size = new Size(403, 53);
             uxUserText.TabIndex = 4;
             uxUserText.KeyDown += uxSendEnter;
             // 
             // ScenarioPage
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AntiqueWhite;
             Controls.Add(uxScenarioContainer);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "ScenarioPage";
-            Size = new Size(1463, 1280);
+            Size = new Size(1024, 768);
+            Load += ScenarioPageLoad;
             uxButtonContainer.ResumeLayout(false);
             uxButtonContainer.PerformLayout();
             uxScenarioContainer.ResumeLayout(false);

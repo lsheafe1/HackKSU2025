@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -29,18 +30,14 @@ namespace HackKSU2025
         GeminiService gemini;
         static string startingPrompt;
         static string wordFilterPrompt;
+        ScenarioManager scenarioManager;
 
 
         public ScenarioPage(ScenarioType scenarioType)
         {
             InitializeComponent();
             InitializeToolTip();
-            InitializeScenario();
-            var harmfulWords = new Dictionary<string, string>
-            {
-                { "careful", "Marked as potentially triggering by Gemini." },
-                { "angry", "Could escalate emotional response in the scenario." }
-            };
+            InitializeScenario(scenarioType);
         }
         public static void RetrieveStartingPrompt()
         {
@@ -57,10 +54,16 @@ namespace HackKSU2025
             toolTip.ReshowDelay = 500;
             toolTip.ShowAlways = true;
         }
-        private async void InitializeScenario()
+        private async void InitializeScenario(ScenarioType type)
         {
+            scenarioManager = new ScenarioManager();
+            scenarioManager.LoadScenarios(type);
+            Scenario scenario = scenarioManager.GetRandomScenario();
+            Debug.WriteLine("Scenario: "+scenario.ScenarioText);
+            Debug.WriteLine("Goal: " + scenario.Goal);
+
             gemini = new GeminiService(this);
-            string text = await gemini.InitializeConversation(startingPrompt);
+            string text = await gemini.InitializeConversation(startingPrompt + "Scenario: " + scenario.ScenarioText + "Goal: " + scenario.Goal);
             AppendStartingMessage(text);
 
         }
@@ -159,7 +162,6 @@ namespace HackKSU2025
         {
             uxSpinner.Visible = false;
         }
-
         private void uxBackClick(object sender, EventArgs e)
         {
             MainForm? main = this.FindForm() as MainForm;
@@ -168,14 +170,17 @@ namespace HackKSU2025
                 main.LoadPage(new MenuPage());
             }
         }
-
-        private void uxNew_Click(object sender, EventArgs e)
+        private void uxNewClick(object sender, EventArgs e)
         {
             MainForm? main = this.FindForm() as MainForm;
             if (main != null)
             {
                 main.LoadPage(new ScenarioPage(ScenarioType.Parent));
             }
+        }
+        private async void ScenarioPageLoad(object sender, EventArgs e)
+        {
+            await InternetChecker.EnsureInternetAsync();
         }
     }
 }

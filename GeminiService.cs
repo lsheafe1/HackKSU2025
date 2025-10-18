@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using GenerativeAI;
 using System.Text.RegularExpressions;
 using HackKSU2025;
+using System.Diagnostics;
 
 public class GeminiService
 {
@@ -68,6 +69,7 @@ public class GeminiService
     }
     public async Task<string> InitializeConversation(string prompt)
     {
+        Debug.WriteLine(prompt);
         try
         {
             scenarioPage.WaitAI();
@@ -104,11 +106,6 @@ public class GeminiService
             Console.WriteLine("JSON parsing error: " + ex.Message);
             return new Dictionary<string, string>();
         }
-
-
-
-
-
     }
     private static string ExtractJson(string text)
     {
