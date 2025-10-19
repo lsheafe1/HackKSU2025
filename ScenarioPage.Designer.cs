@@ -34,6 +34,7 @@
             uxNew = new Button();
             uxMessageBox = new RichTextBox();
             uxScenarioContainer = new Panel();
+            uxAdvice = new TextBox();
             uxRecordButton = new Button();
             uxSpinner = new PictureBox();
             uxSendButton = new Button();
@@ -106,6 +107,7 @@
             // 
             // uxScenarioContainer
             // 
+            uxScenarioContainer.Controls.Add(uxAdvice);
             uxScenarioContainer.Controls.Add(uxRecordButton);
             uxScenarioContainer.Controls.Add(uxSpinner);
             uxScenarioContainer.Controls.Add(uxSendButton);
@@ -117,6 +119,19 @@
             uxScenarioContainer.Name = "uxScenarioContainer";
             uxScenarioContainer.Size = new Size(1024, 768);
             uxScenarioContainer.TabIndex = 4;
+            // 
+            // uxAdvice
+            // 
+            uxAdvice.BackColor = Color.AntiqueWhite;
+            uxAdvice.BorderStyle = BorderStyle.None;
+            uxAdvice.Enabled = false;
+            uxAdvice.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            uxAdvice.Location = new Point(22, 581);
+            uxAdvice.Multiline = true;
+            uxAdvice.Name = "uxAdvice";
+            uxAdvice.Size = new Size(414, 155);
+            uxAdvice.TabIndex = 8;
+            uxAdvice.Text = "Advice: ";
             // 
             // uxRecordButton
             // 
@@ -155,10 +170,12 @@
             // 
             // uxUserText
             // 
+            uxUserText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxUserText.Location = new Point(442, 581);
             uxUserText.Multiline = true;
             uxUserText.Name = "uxUserText";
-            uxUserText.Size = new Size(400, 80);
+            uxUserText.ScrollBars = ScrollBars.Vertical;
+            uxUserText.Size = new Size(400, 155);
             uxUserText.TabIndex = 4;
             uxUserText.KeyDown += uxSendEnter;
             // 
@@ -190,5 +207,6 @@
         private TextBox uxUserText;
         private PictureBox uxSpinner;
         private Button uxRecordButton;
+        private TextBox uxAdvice;
     }
 }

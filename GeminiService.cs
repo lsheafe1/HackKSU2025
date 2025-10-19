@@ -36,6 +36,7 @@ public class GeminiService
         });
         chatSession = model.StartChat();
 
+
     }
     public async Task<string> GenerateChatMessage(string prompt)
     {
@@ -77,7 +78,6 @@ public class GeminiService
         {
             scenarioPage.WaitAI();
             var response = await wordsModel.GenerateContentAsync(prompt);
-            chatSession.History.ToString();
             scenarioPage.StopWaitAI();
 
             return response.Text;
@@ -89,6 +89,32 @@ public class GeminiService
             return null!;
         }
     }
+    public async Task<string> GenerateAdviceMessage(string prompt)
+    {
+        try
+        {
+            scenarioPage.WaitAI();
+            var response = await model.GenerateContentAsync(prompt);
+            scenarioPage.StopWaitAI();
+
+            return response.Text;
+
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return null!;
+        }
+    }
+
+    public async Task<string> GenerateAdvice(string prompt)
+    {
+        
+
+        Debug.WriteLine("HISTORY: " +GetHistory());
+        return await GenerateAdviceMessage(prompt + GetHistory());
+    }
+
     public async Task<string> InitializeConversation(string prompt)
     {
         Debug.WriteLine(prompt);
@@ -112,12 +138,11 @@ public class GeminiService
         System.Diagnostics.Debug.WriteLine("Getting harmful words");
         scenarioPage.WaitAI();
 
-        string output = await GenerateMessage(prompt + chatSession.History + "THIS IS THE USER INPUT, GET HARMFUL  WORDS HERE\n" + userText);
+        string output = await GenerateMessage(prompt + GetHistory() + "THIS IS THE USER INPUT, GET HARMFUL  WORDS HERE\n" + userText);
         if (string.IsNullOrWhiteSpace(output))
             return new Dictionary<string, string>();
         string json = ExtractJson(output);
 
-        // Try to parse it into a dictionary
         try
         {
             var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
@@ -135,6 +160,25 @@ public class GeminiService
 
         Match match = Regex.Match(text, "{.*}", RegexOptions.Singleline);
         return match.Success ? match.Value : "{}";
+    }
+    private string GetHistory()
+    {
+        var historyBuilder = new StringBuilder();
+
+        foreach (var message in chatSession.History)
+        {
+            historyBuilder.AppendLine($"[{message.Role}]");
+            foreach (var part in message.Parts)
+            {
+                if (part.Text is not null)
+                {
+                    historyBuilder.AppendLine(part.Text);
+                }
+            }
+            historyBuilder.AppendLine();
+        }
+
+       return historyBuilder.ToString();
     }
 
 }

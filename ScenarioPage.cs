@@ -57,8 +57,8 @@ namespace HackKSU2025
         {
             toolTip = new ToolTip();
             toolTip.AutoPopDelay = 5000;
-            toolTip.InitialDelay = 500;
-            toolTip.ReshowDelay = 500;
+            toolTip.InitialDelay = 10;
+            toolTip.ReshowDelay = 10;
             toolTip.ShowAlways = true;
         }
         private async void InitializeScenario(ScenarioType type)
@@ -88,8 +88,9 @@ namespace HackKSU2025
         {
 
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
-            uxMessageBox.AppendText("");
             uxMessageBox.AppendText(text);
+            uxMessageBox.AppendText("\n");
+
         }
 
 
@@ -183,11 +184,13 @@ namespace HackKSU2025
         private async void UserInput()
         {
             string text = uxUserText.Text.Trim();
-            uxUserText.Text = "";
-            string str = await gemini.GenerateChatMessage("Below is the users response. Please roleplay as the other person described in the scenario. Remember, you are roleplaying as the" +
+            uxUserText.Text = null;
+            string aiMessage = await gemini.GenerateChatMessage("Below is the users response. Please roleplay as the other person described in the scenario. Remember, you are roleplaying as the" +
                 "person who needs help from the user. User: "+ text);
+            string advice = await gemini.GenerateAdvice("Based on this conversation history, speak directly to the user and give some advice on how to approach what they say next. Keep in mind the goal of the conversation, but dont explicitaly state it. Be subtle and guiding, and keep the advice simple and short. HISTORY: ");
             AppendUserMessage(text, await GetHarmfulWords(text));
-            AppendAIMessage(str);
+            AppendAIMessage(aiMessage);
+            uxAdvice.Text = "Advice: " + advice;
         }
         public void WaitAI()
         {
