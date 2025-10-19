@@ -59,5 +59,15 @@ namespace HackKSU2025.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] End_Icon {
+            get {
+                object obj = ResourceManager.GetObject("End_Icon", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

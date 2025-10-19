@@ -28,7 +28,7 @@ public class GeminiService
 
         model = googleAI.CreateGenerativeModel("models/gemini-2.5-flash-lite", new GenerationConfig
         {
-            Temperature = 1f
+            Temperature = 1.4f
         });
         wordsModel = googleAI.CreateGenerativeModel("models/gemini-2.5-flash", new GenerationConfig
         {

@@ -33,6 +33,7 @@ namespace HackKSU2025
         static string wordFilterPrompt;
         static string goalPrompt;
         ScenarioManager scenarioManager;
+        AudioRecorder audioRecorder = new();
 
 
         public ScenarioPage(ScenarioType scenarioType)
@@ -73,16 +74,21 @@ namespace HackKSU2025
         }
         public void AppendAIMessage(string text)
         {
+            uxMessageBox.AppendText("\n");
+
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
-            uxMessageBox.AppendText("AI: ");
-            uxMessageBox.AppendText(text + "\n");
+            //uxMessageBox.AppendText("AI: ");
+            uxMessageBox.AppendText(text);
+            uxMessageBox.SelectionStart = uxMessageBox.TextLength;
+            uxMessageBox.ScrollToCaret();
             CheckGoal();
         }
         public void AppendStartingMessage(string text)
         {
+
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
             uxMessageBox.AppendText("");
-            uxMessageBox.AppendText(text + "\n");
+            uxMessageBox.AppendText(text);
         }
 
 
@@ -90,6 +96,8 @@ namespace HackKSU2025
 
         public void AppendUserMessage(string text, Dictionary<string, string> harmfulWordsWithReason)
         {
+            uxMessageBox.AppendText("\n");
+
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Right;
             uxMessageBox.AppendText("User: ");
 
@@ -115,7 +123,7 @@ namespace HackKSU2025
                 uxMessageBox.AppendText(word + " ");
             }
 
-            uxMessageBox.AppendText("\n");
+            //uxMessageBox.AppendText("\n");
             uxMessageBox.SelectionStart = uxMessageBox.TextLength;
             uxMessageBox.ScrollToCaret();
             foreach (var dic in harmfulWordsWithReason)
@@ -148,7 +156,7 @@ namespace HackKSU2025
             toolTip?.SetToolTip(uxMessageBox, string.Empty);
         }
 
-        private async void uxSendClick(object sender, EventArgs e)
+        private void uxSendClick(object sender, EventArgs e)
         {
             UserInput();
         }
@@ -162,7 +170,8 @@ namespace HackKSU2025
         }
         private async void UserInput()
         {
-            string str = await gemini.GenerateChatMessage(uxUserText.Text);
+            string str = await gemini.GenerateChatMessage("Below is the users response. Please roleplay as the other person described in the scenario. Remember, you are roleplaying as the" +
+                "person who needs help from the user. User: "+uxUserText.Text);
             AppendUserMessage(uxUserText.Text, await GetHarmfulWords(uxUserText.Text));
             AppendAIMessage(str);
         }
@@ -205,7 +214,21 @@ namespace HackKSU2025
 
         private void uxRecordClick(object sender, EventArgs e)
         {
+            if(!audioRecorder.IsRecording)
+            {
+                audioRecorder.StartRecording();
 
+                byte[] imageBytes = Properties.Resources.End_Icon;
+
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    uxRecordButton.Image = System.Drawing.Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                audioRecorder.StopRecording();
+            }
         }
     }
 }

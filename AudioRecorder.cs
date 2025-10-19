@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using NAudio.Wave;
 
-public class Audio_Recorder
+public class AudioRecorder
 {
     private WaveInEvent waveIn;
     private WaveFileWriter writer;
@@ -29,12 +30,12 @@ public class Audio_Recorder
         {
             writer?.Dispose();
             waveIn?.Dispose();
-            Console.WriteLine($"Recording saved to {outputFilePath}");
+            Debug.WriteLine($"Recording saved to {outputFilePath}");
         };
 
         waveIn.StartRecording();
         isRecording = true;
-        Console.WriteLine("Recording started...");
+        Debug.WriteLine("Recording started...");
     }
 
     public void StopRecording()
@@ -43,6 +44,6 @@ public class Audio_Recorder
 
         waveIn.StopRecording();
         isRecording = false;
-        Console.WriteLine("Recording stopped.");
+        Debug.WriteLine("Recording stopped.");
     }
 }
