@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "scenario": "A student tells you they are scared after hearing about gun violence on the news.",
+        "goal": "Calm the student."
+    },
+    {
+        "id": 2,
+        "scenario": "A student asks why people hurt others with guns in general.",
+        "goal": "Give a short, clear explanation."
+    },
+    {
+        "id": 3,
+        "scenario": "A student shares that they lost a family member or friend to gun violence.",
+        "goal": "Offer comfort."
+    },
+    {
+        "id": 4,
+        "scenario": "A student expresses fear after seeing a violent video involving guns online.",
+        "goal": "Clarify it was fictional."
+    },
+    {
+        "id": 5,
+        "scenario": "A student tells you they are worried about themselves or others even though nothing happened at school.",
+        "goal": "Provide reassurance."
+    },
+    {
+        "id": 6,
+        "scenario": "A student asks why some people carry guns.",
+        "goal": "Explain simply."
+    },
+    {
+        "id": 7,
+        "scenario": "A student wants to talk about how a community member was affected by gun violence.",
+        "goal": "Listen and acknowledge."
+    },
+    {
+        "id": 8,
+        "scenario": "A student shares that they feel nervous when hearing news about gun violence.",
+        "goal": "Help them feel less anxious."
+    },
+    {
+        "id": 9,
+        "scenario": "A student asks why the news talks so much about shootings.",
+        "goal": "Give a brief media explanation."
+    },
+    {
+        "id": 10,
+        "scenario": "A student wants to write a school assignment about gun safety and asks for guidance.",
+        "goal": "Provide one or two simple tips."
+    },
+    {
+        "id": 11,
+        "scenario": "A student talks about a friend who witnessed gun violence in the past.",
+        "goal": "Respond with empathy."
+    },
+    {
+        "id": 12,
+        "scenario": "A student expresses fear after hearing about gun violence in a movie or TV show.",
+        "goal": "Explain it's not real."
+    },
+    {
+        "id": 13,
+        "scenario": "A student asks if it’s normal to feel anxious after hearing news of shootings.",
+        "goal": "Reassure that anxiety is normal."
+    },
+    {
+        "id": 14,
+        "scenario": "A student asks why some students joke about guns.",
+        "goal": "Give a short explanation about seriousness."
+    },
+    {
+        "id": 15,
+        "scenario": "A student shares they have questions about what happened to someone affected by gun violence.",
+        "goal": "Answer simply and clearly."
+    },
+    {
+        "id": 16,
+        "scenario": "A student asks how to support a friend who is grieving due to gun violence.",
+        "goal": "Provide one or two supportive suggestions."
+    },
+    {
+        "id": 17,
+        "scenario": "A student expresses fear after hearing about a past incident that happened in another city.",
+        "goal": "Help them feel safer."
+    },
+    {
+        "id": 18,
+        "scenario": "A student asks why people sometimes feel unsafe around guns.",
+        "goal": "Explain briefly."
+    },
+    {
+        "id": 19,
+        "scenario": "A student shares feelings of sadness after learning that someone they know experienced gun violence.",
+        "goal": "Acknowledge feelings."
+    },
+    {
+        "id": 20,
+        "scenario": "A student wants to discuss gun safety as part of a class project.",
+        "goal": "Give a simple suggestion."
+    },
+    {
+        "id": 21,
+        "scenario": "A student asks why guns can be dangerous even if no one is using them right now.",
+        "goal": "Provide a short safety explanation."
+    },
+    {
+        "id": 22,
+        "scenario": "A student expresses worry about what might happen in general, not at school.",
+        "goal": "Reassure quickly."
+    },
+    {
+        "id": 23,
+        "scenario": "A student asks about how families cope after losing someone to gun violence.",
+        "goal": "Give a simple comforting answer."
+    },
+    {
+        "id": 24,
+        "scenario": "A student shares that hearing about past shootings makes them feel unsafe in general.",
+        "goal": "Help them feel more secure."
+    },
+    {
+        "id": 25,
+        "scenario": "A student wants to write a story about gun violence and asks how to do it responsibly.",
+        "goal": "Offer a short suggestion."
+    },
+    {
+        "id": 26,
+        "scenario": "A student asks why some people react strongly to news about guns.",
+        "goal": "Explain briefly that people respond differently."
+    },
+    {
+        "id": 27,
+        "scenario": "A student asks how to talk to younger siblings about past gun violence safely.",
+        "goal": "Provide a quick, simple tip."
+    },
+    {
+        "id": 28,
+        "scenario": "A student expresses anxiety after hearing about past incidents in the community.",
+        "goal": "Help reduce anxiety."
+    },
+    {
+        "id": 29,
+        "scenario": "A student asks what to do if they feel scared about past incidents.",
+        "goal": "Provide a brief reassuring answer."
+    },
+    {
+        "id": 30,
+        "scenario": "A student expresses fear after hearing about gun violence in their community in the past.",
+        "goal": "Help them feel calmer."
+    }
+]

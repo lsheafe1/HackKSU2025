@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "scenario": "As a parent, your child expresses concern after hearing about guns on the news.",
+        "goal": "Help your child feel calm."
+    },
+    {
+        "id": 2,
+        "scenario": "As a parent, your child asks why people have guns.",
+        "goal": "Give a short, simple explanation."
+    },
+    {
+        "id": 3,
+        "scenario": "As a parent, your child heard about a safety drill at school involving safety rules for guns.",
+        "goal": "Explain the drill in simple terms."
+    },
+    {
+        "id": 4,
+        "scenario": "As a parent, your child asks if guns are dangerous even if they aren’t used.",
+        "goal": "Provide a brief, clear answer."
+    },
+    {
+        "id": 5,
+        "scenario": "As a parent, your child feels nervous after seeing a gun in a movie or video game.",
+        "goal": "Clarify that it is pretend."
+    },
+    {
+        "id": 6,
+        "scenario": "As a parent, your child asks why some adults carry guns for work.",
+        "goal": "Give a simple, neutral explanation."
+    },
+    {
+        "id": 7,
+        "scenario": "As a parent, your child wants to talk about a friend’s concern about guns.",
+        "goal": "Listen and acknowledge their concern."
+    },
+    {
+        "id": 8,
+        "scenario": "As a parent, your child feels anxious after hearing about a past incident with a gun at a store or public place.",
+        "goal": "Help your child feel reassured."
+    },
+    {
+        "id": 9,
+        "scenario": "As a parent, your child asks why the news talks about guns a lot.",
+        "goal": "Give a simple explanation about media attention."
+    },
+    {
+        "id": 10,
+        "scenario": "As a parent, your child wants to learn how to be safe around guns if they see one.",
+        "goal": "Provide a simple safety tip."
+    },
+    {
+        "id": 11,
+        "scenario": "As a parent, your child is worried after hearing classmates joke about guns.",
+        "goal": "Explain briefly why jokes about guns can be serious."
+    },
+    {
+        "id": 12,
+        "scenario": "As a parent, your child asks if it’s normal to feel anxious when hearing about guns in general.",
+        "goal": "Reassure that it is normal to have feelings."
+    },
+    {
+        "id": 13,
+        "scenario": "As a parent, your child wants to know why some people react strongly to seeing guns.",
+        "goal": "Explain briefly that people respond differently."
+    },
+    {
+        "id": 14,
+        "scenario": "As a parent, your child asks why safety rules exist for guns.",
+        "goal": "Provide a clear, simple answer."
+    },
+    {
+        "id": 15,
+        "scenario": "As a parent, your child heard about a gun being found safely stored at home and is curious.",
+        "goal": "Explain storage rules simply."
+    },
+    {
+        "id": 16,
+        "scenario": "As a parent, your child feels worried after hearing a story about a gun being used for self-defense.",
+        "goal": "Help your child feel safe and calm."
+    },
+    {
+        "id": 17,
+        "scenario": "As a parent, your child asks why some adults go to shooting ranges.",
+        "goal": "Give a simple explanation about practice and sport."
+    },
+    {
+        "id": 18,
+        "scenario": "As a parent, your child asks what to do if they see a gun at a friend’s house.",
+        "goal": "Provide a clear safety suggestion."
+    },
+    {
+        "id": 19,
+        "scenario": "As a parent, your child feels nervous after hearing a story about a gun being in a public area long ago.",
+        "goal": "Help your child feel reassured."
+    },
+    {
+        "id": 20,
+        "scenario": "As a parent, your child asks why some people choose not to have guns at home.",
+        "goal": "Give a simple explanation."
+    },
+    {
+        "id": 21,
+        "scenario": "As a parent, your child is curious about the difference between real guns and toy guns.",
+        "goal": "Explain simply."
+    },
+    {
+        "id": 22,
+        "scenario": "As a parent, your child asks how to tell if a gun is safe or not.",
+        "goal": "Provide a brief safety tip."
+    },
+    {
+        "id": 23,
+        "scenario": "As a parent, your child worries after hearing classmates talk about guns in general.",
+        "goal": "Help your child feel reassured."
+    },
+    {
+        "id": 24,
+        "scenario": "As a parent, your child wants to talk about why rules exist in schools regarding guns.",
+        "goal": "Give a short explanation."
+    },
+    {
+        "id": 25,
+        "scenario": "As a parent, your child asks why some adults carry guns for hunting or sport.",
+        "goal": "Explain briefly about recreational use."
+    },
+    {
+        "id": 26,
+        "scenario": "As a parent, your child wants to know what to do if they see a gun at school or in public.",
+        "goal": "Provide one clear safety instruction."
+    },
+    {
+        "id": 27,
+        "scenario": "As a parent, your child asks why guns are sometimes used in movies or TV shows.",
+        "goal": "Explain it’s for storytelling and fiction."
+    },
+    {
+        "id": 28,
+        "scenario": "As a parent, your child expresses concern about seeing toy guns and wonders if they are safe to play with.",
+        "goal": "Clarify how toy guns are different and safe."
+    },
+    {
+        "id": 29,
+        "scenario": "As a parent, your child asks why some adults take gun safety courses.",
+        "goal": "Provide a brief explanation about learning safety."
+    },
+    {
+        "id": 30,
+        "scenario": "As a parent, your child feels curious and asks about rules for handling guns safely.",
+        "goal": "Give a simple, clear answer."
+    }
+]
