@@ -144,11 +144,7 @@
         "scenario": "As a parent, your child expresses anxiety after hearing about past incidents in the community.",
         "goal": "Help them manage anxiety and feel safe."
     },
-    {
-        "id": 30,
-        "scenario": "As a parent, your child asks why people carry guns even when they don’t need them.",
-        "goal": "Provide a neutral explanation focusing on safety and rules."
-    },
+    
     {
         "id": 31,
         "scenario": "As a parent, your child wants to discuss news stories about gun violence and asks how to handle them.",
