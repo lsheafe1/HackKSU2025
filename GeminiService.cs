@@ -61,7 +61,7 @@ public class GeminiService
             scenarioPage.WaitAI();
             var response = await chatSession.GenerateContentAsync(prompt);
             scenarioPage.StopWaitAI();
-
+            Debug.WriteLine("Goal: " + response.Text);
             return bool.Parse(response.Text);
 
         }

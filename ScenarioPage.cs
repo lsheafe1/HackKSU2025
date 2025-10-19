@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GenerativeAI;
@@ -62,7 +63,7 @@ namespace HackKSU2025
             scenarioManager = new ScenarioManager();
             scenarioManager.LoadScenarios(type);
             Scenario scenario = scenarioManager.GetRandomScenario();
-            Debug.WriteLine("Scenario: "+scenario.ScenarioText);
+            Debug.WriteLine("Scenario: " + scenario.ScenarioText);
             Debug.WriteLine("Goal: " + scenario.Goal);
 
             gemini = new GeminiService(this);
@@ -74,8 +75,8 @@ namespace HackKSU2025
         {
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
             uxMessageBox.AppendText("AI: ");
-            uxMessageBox.AppendText(text +"\n");
-            //CheckGoal();
+            uxMessageBox.AppendText(text + "\n");
+            CheckGoal();
         }
         public void AppendStartingMessage(string text)
         {
@@ -91,37 +92,38 @@ namespace HackKSU2025
         {
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Right;
             uxMessageBox.AppendText("User: ");
-            string[] words = text.Split(' ');
+
+            string[] words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
             foreach (string word in words)
             {
-                int start = uxMessageBox.TextLength; // store starting index
+                int start = uxMessageBox.TextLength;
 
-                // Remove punctuation for matching
-                string cleanWord = word.Trim(new char[] { '.', ',', '!', '?', ';', ':', '"', '\'' });
+                // Remove any leading/trailing punctuation and lowercase
+                string cleanWord = Regex.Replace(word, @"^\W+|\W+$", "").ToLowerInvariant();
 
                 if (harmfulWordsWithReason.ContainsKey(cleanWord))
                 {
-                    uxMessageBox.SelectionColor = Color.Red;   // harmful word
-                                                               // Save position, length, and reason
+                    uxMessageBox.SelectionColor = Color.Red;
                     harmfulWordHighlights.Add((start, word.Length, harmfulWordsWithReason[cleanWord]));
                 }
                 else
                 {
-                    uxMessageBox.SelectionColor = Color.Black; // normal word
+                    uxMessageBox.SelectionColor = Color.Black;
                 }
 
                 uxMessageBox.AppendText(word + " ");
             }
 
-            uxMessageBox.AppendText("\n"); // Newline at end of message
+            uxMessageBox.AppendText("\n");
             uxMessageBox.SelectionStart = uxMessageBox.TextLength;
             uxMessageBox.ScrollToCaret();
-            foreach(var dic in harmfulWordsWithReason)
+            foreach (var dic in harmfulWordsWithReason)
             {
-                Debug.WriteLine(dic.Key);
+                Debug.WriteLine($"Key: {dic.Key}");
             }
         }
+
         private async Task<Dictionary<string, string>> GetHarmfulWords(string text)
         {
             return await gemini.GetHarmfulWords(wordFilterPrompt, text);
@@ -199,6 +201,11 @@ namespace HackKSU2025
             {
                 MessageBox.Show("Goal achieved!");
             }
+        }
+
+        private void uxRecordClick(object sender, EventArgs e)
+        {
+
         }
     }
 }
