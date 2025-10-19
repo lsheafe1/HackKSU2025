@@ -37,6 +37,7 @@
             uxSpinner = new PictureBox();
             uxSendButton = new Button();
             uxUserText = new TextBox();
+            button1 = new Button();
             uxButtonContainer.SuspendLayout();
             uxScenarioContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uxSpinner).BeginInit();
@@ -64,7 +65,7 @@
             uxBack.Font = new Font("Microsoft Sans Serif", 21.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxBack.ForeColor = Color.Azure;
             uxBack.Location = new Point(10, 10);
-            uxBack.Margin = new Padding(10, 10, 10, 10);
+            uxBack.Margin = new Padding(10);
             uxBack.Name = "uxBack";
             uxBack.Size = new Size(99, 45);
             uxBack.TabIndex = 0;
@@ -82,7 +83,7 @@
             uxNew.Font = new Font("Microsoft Sans Serif", 21.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxNew.ForeColor = Color.Azure;
             uxNew.Location = new Point(129, 10);
-            uxNew.Margin = new Padding(10, 10, 10, 10);
+            uxNew.Margin = new Padding(10);
             uxNew.Name = "uxNew";
             uxNew.Size = new Size(85, 45);
             uxNew.TabIndex = 1;
@@ -98,13 +99,14 @@
             uxMessageBox.Location = new Point(20, 102);
             uxMessageBox.Name = "uxMessageBox";
             uxMessageBox.ReadOnly = true;
-            uxMessageBox.Size = new Size(985, 290);
+            uxMessageBox.Size = new Size(985, 473);
             uxMessageBox.TabIndex = 3;
             uxMessageBox.Text = "";
             uxMessageBox.MouseMove += uxMouseMove;
             // 
             // uxScenarioContainer
             // 
+            uxScenarioContainer.Controls.Add(button1);
             uxScenarioContainer.Controls.Add(uxSpinner);
             uxScenarioContainer.Controls.Add(uxSendButton);
             uxScenarioContainer.Controls.Add(uxUserText);
@@ -118,9 +120,9 @@
             // 
             // uxSpinner
             // 
-            uxSpinner.BackColor = Color.Linen;
+            uxSpinner.BackColor = Color.Transparent;
             uxSpinner.Image = (Image)resources.GetObject("uxSpinner.Image");
-            uxSpinner.Location = new Point(20, 324);
+            uxSpinner.Location = new Point(22, 581);
             uxSpinner.Name = "uxSpinner";
             uxSpinner.Size = new Size(54, 69);
             uxSpinner.SizeMode = PictureBoxSizeMode.Zoom;
@@ -129,23 +131,36 @@
             // 
             // uxSendButton
             // 
-            uxSendButton.Location = new Point(922, 339);
+            uxSendButton.BackgroundImage = (Image)resources.GetObject("uxSendButton.BackgroundImage");
+            uxSendButton.BackgroundImageLayout = ImageLayout.Stretch;
+            uxSendButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            uxSendButton.Location = new Point(922, 581);
             uxSendButton.Name = "uxSendButton";
-            uxSendButton.Size = new Size(79, 53);
+            uxSendButton.Size = new Size(80, 80);
             uxSendButton.TabIndex = 5;
-            uxSendButton.Text = "Send";
             uxSendButton.UseVisualStyleBackColor = true;
             uxSendButton.Click += uxSendClick;
             // 
             // uxUserText
             // 
-            uxUserText.BorderStyle = BorderStyle.FixedSingle;
-            uxUserText.Location = new Point(518, 340);
+            uxUserText.Location = new Point(442, 581);
             uxUserText.Multiline = true;
             uxUserText.Name = "uxUserText";
-            uxUserText.Size = new Size(403, 53);
+            uxUserText.Size = new Size(400, 80);
             uxUserText.TabIndex = 4;
             uxUserText.KeyDown += uxSendEnter;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.White;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(842, 581);
+            button1.Name = "button1";
+            button1.Size = new Size(80, 80);
+            button1.TabIndex = 7;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += uxRecordClick;
             // 
             // ScenarioPage
             // 
@@ -174,5 +189,6 @@
         private Button uxSendButton;
         private TextBox uxUserText;
         private PictureBox uxSpinner;
+        private Button button1;
     }
 }
