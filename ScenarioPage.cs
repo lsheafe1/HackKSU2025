@@ -194,9 +194,9 @@ namespace HackKSU2025
             await Task.WhenAll(aiMessage, advice, harmfulWords);
 
             AppendUserMessage(text, harmfulWords.Result);
-            if (userMessages > 1)
+            if (userMessages > 2)
             {
-                CheckGoal();
+                await CheckGoal();
             }
             AppendAIMessage(aiMessage.Result);
             uxAdvice.Text = "Advice: " + advice.Result;
@@ -243,7 +243,7 @@ namespace HackKSU2025
         {
             await InternetChecker.EnsureInternetAsync();
         }
-        private async void CheckGoal()
+        private async Task CheckGoal()
         {
             WaitAI();
             bool goal = await gemini.CheckGoal(goalPrompt);
