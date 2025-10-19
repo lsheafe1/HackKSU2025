@@ -2,251 +2,246 @@
     {
         "id": 1,
         "scenario": "As a teacher, a student tells you they are scared after hearing about gun violence on the news.",
-        "goal": "Help the student process the news and feel safe."
+        "goal": "Offer a simple explanation and acknowledge their feelings."
     },
     {
         "id": 2,
         "scenario": "As a teacher, a student asks why people hurt others with guns in general.",
-        "goal": "Answer calmly and focus on safety and empathy."
+        "goal": "Give a calm, neutral answer."
     },
     {
         "id": 3,
         "scenario": "As a teacher, a student shares that they lost a family member or friend to gun violence.",
-        "goal": "Support grief and coping strategies."
+        "goal": "Provide a comforting response and let them speak."
     },
     {
         "id": 4,
         "scenario": "As a teacher, a student expresses fear after seeing a violent video involving guns online.",
-        "goal": "Help the student distinguish fiction from reality and manage fear."
+        "goal": "Explain the difference between reality and fiction."
     },
     {
         "id": 5,
         "scenario": "As a teacher, a student tells you they are worried about themselves or others even though nothing happened at school.",
-        "goal": "Provide reassurance and teach coping strategies."
+        "goal": "Reassure gently and normalize their feelings."
     },
     {
         "id": 6,
         "scenario": "As a teacher, a student asks why some people carry guns.",
-        "goal": "Provide a simple, neutral explanation focusing on rules and safety."
+        "goal": "Provide a neutral and simple explanation."
     },
     {
         "id": 7,
         "scenario": "As a teacher, a student wants to talk about how a community member was affected by gun violence.",
-        "goal": "Support discussion and emotional processing."
+        "goal": "Listen and respond thoughtfully."
     },
     {
         "id": 8,
         "scenario": "As a teacher, a student shares that they feel nervous when hearing news about gun violence.",
-        "goal": "Help the student process feelings and feel safe."
+        "goal": "Acknowledge their feelings and provide a calm response."
     },
     {
         "id": 9,
         "scenario": "As a teacher, a student asks why the news talks so much about shootings.",
-        "goal": "Explain media coverage simply and reassure the student."
+        "goal": "Offer a simple explanation and context."
     },
     {
         "id": 10,
         "scenario": "As a teacher, a student wants to write a school assignment about gun safety and asks for guidance.",
-        "goal": "Encourage safe and thoughtful expression."
+        "goal": "Encourage their ideas and provide gentle guidance."
     },
     {
         "id": 11,
         "scenario": "As a teacher, a student talks about a friend who witnessed gun violence in the past.",
-        "goal": "Support emotional processing and empathy."
+        "goal": "Respond with empathy and invite them to share more."
     },
     {
         "id": 12,
         "scenario": "As a teacher, a student expresses fear after hearing about gun violence in a movie or TV show.",
-        "goal": "Help them distinguish fiction from reality."
+        "goal": "Clarify the difference between real events and fiction."
     },
     {
         "id": 13,
         "scenario": "As a teacher, a student asks if it’s normal to feel anxious after hearing news of shootings.",
-        "goal": "Normalize emotions and discuss coping strategies."
+        "goal": "Normalize their feelings and provide reassurance."
     },
     {
         "id": 14,
         "scenario": "As a teacher, a student asks why some students joke about guns.",
-        "goal": "Explain seriousness and encourage safe behavior."
+        "goal": "Offer a calm, simple explanation about behavior."
     },
     {
         "id": 15,
         "scenario": "As a teacher, a student shares they have questions about what happened to someone affected by gun violence.",
-        "goal": "Provide factual, age-appropriate answers and reassurance."
+        "goal": "Give clear, age-appropriate answers."
     },
     {
         "id": 16,
         "scenario": "As a teacher, a student asks how to support a friend who is grieving due to gun violence.",
-        "goal": "Give guidance on empathy and healthy support."
+        "goal": "Suggest simple ways to show care."
     },
     {
         "id": 17,
         "scenario": "As a teacher, a student expresses fear after hearing about a past incident that happened in another city.",
-        "goal": "Help them process the story and feel safe."
+        "goal": "Provide context and reassurance."
     },
     {
         "id": 18,
         "scenario": "As a teacher, a student asks why people sometimes feel unsafe around guns.",
-        "goal": "Provide a neutral explanation focusing on safety and awareness."
+        "goal": "Give a neutral explanation and context."
     },
     {
         "id": 19,
         "scenario": "As a teacher, a student shares feelings of sadness after learning that someone they know experienced gun violence.",
-        "goal": "Offer emotional support and coping strategies."
+        "goal": "Respond empathetically and acknowledge their feelings."
     },
     {
         "id": 20,
         "scenario": "As a teacher, a student wants to discuss gun safety as part of a class project.",
-        "goal": "Guide them to discuss the topic responsibly and safely."
+        "goal": "Encourage thoughtful discussion and input."
     },
     {
         "id": 21,
         "scenario": "As a teacher, a student asks why guns can be dangerous even if no one is using them right now.",
-        "goal": "Explain risks and safety considerations in a non-alarming way."
+        "goal": "Explain in a simple and clear way."
     },
     {
         "id": 22,
         "scenario": "As a teacher, a student expresses worry about what might happen in general, not at school.",
-        "goal": "Provide reassurance and teach coping strategies."
+        "goal": "Offer reassurance and context."
     },
     {
         "id": 23,
         "scenario": "As a teacher, a student asks about how families cope after losing someone to gun violence.",
-        "goal": "Discuss grief and resilience in an age-appropriate way."
+        "goal": "Provide an age-appropriate explanation."
     },
     {
         "id": 24,
         "scenario": "As a teacher, a student asks why some people talk about guns even if nothing happened.",
-        "goal": "Explain social behavior and the importance of responsible conversation."
+        "goal": "Offer a simple explanation about social behavior."
     },
     {
         "id": 25,
         "scenario": "As a teacher, a student shares that hearing about past shootings makes them feel unsafe in general.",
-        "goal": "Provide reassurance and discuss coping techniques."
+        "goal": "Acknowledge their feeling and give gentle reassurance."
     },
     {
         "id": 26,
         "scenario": "As a teacher, a student wants to write a story about gun violence and asks how to do it responsibly.",
-        "goal": "Encourage safe, thoughtful expression and reflection."
+        "goal": "Provide gentle guidance and encourage expression."
     },
     {
         "id": 27,
         "scenario": "As a teacher, a student asks why some people react strongly to news about guns.",
-        "goal": "Explain emotional responses and normalize feelings."
+        "goal": "Explain calmly that people respond differently."
     },
     {
         "id": 28,
         "scenario": "As a teacher, a student asks how to talk to younger siblings about past gun violence safely.",
-        "goal": "Provide guidance on age-appropriate communication."
+        "goal": "Offer simple suggestions for discussion."
     },
     {
         "id": 29,
         "scenario": "As a teacher, a student expresses anxiety after hearing about past incidents in the community.",
-        "goal": "Help them manage anxiety and feel safe."
+        "goal": "Acknowledge their feelings and provide calm context."
     },
     {
         "id": 30,
         "scenario": "As a teacher, a student asks why people carry guns even when they don’t need them.",
-        "goal": "Provide a neutral explanation focusing on safety and rules."
+        "goal": "Give a neutral and clear answer."
     },
     {
         "id": 31,
         "scenario": "As a teacher, a student wants to discuss news stories about gun violence and asks how to handle them.",
-        "goal": "Teach responsible media discussion and coping strategies."
+        "goal": "Invite their perspective and respond calmly."
     },
     {
         "id": 32,
         "scenario": "As a teacher, a student expresses concern about friends who may be anxious about past gun violence.",
-        "goal": "Guide supportive peer interaction and empathy."
+        "goal": "Offer empathetic suggestions subtly."
     },
     {
         "id": 33,
         "scenario": "As a teacher, a student asks what it means when someone talks about being afraid of guns.",
-        "goal": "Explain fear and coping strategies."
+        "goal": "Give a simple explanation and reassurance."
     },
     {
         "id": 34,
         "scenario": "As a teacher, a student asks why some families talk about past incidents of gun violence.",
-        "goal": "Explain in a neutral, age-appropriate way."
+        "goal": "Provide a calm, clear explanation."
     },
     {
         "id": 35,
         "scenario": "As a teacher, a student wants to write a reflection on how gun violence affects communities.",
-        "goal": "Encourage safe expression and discussion of feelings."
+        "goal": "Encourage thoughtful expression."
     },
     {
         "id": 36,
         "scenario": "As a teacher, a student asks how to feel safe after hearing news about gun violence in general.",
-        "goal": "Teach reassurance techniques and coping strategies."
+        "goal": "Offer simple reassurance and context."
     },
     {
         "id": 37,
         "scenario": "As a teacher, a student shares they feel anxious after reading about a past incident.",
-        "goal": "Help them process anxiety and normalize feelings."
+        "goal": "Acknowledge their feelings and respond calmly."
     },
     {
         "id": 38,
         "scenario": "As a teacher, a student asks why some people are affected by gun violence more than others.",
-        "goal": "Discuss trauma and resilience in an age-appropriate way."
+        "goal": "Provide a simple, age-appropriate explanation."
     },
     {
         "id": 39,
         "scenario": "As a teacher, a student expresses concern about friends who are scared after hearing about gun violence.",
-        "goal": "Provide guidance on supporting peers safely."
+        "goal": "Offer subtle guidance and reassurance."
     },
     {
         "id": 40,
         "scenario": "As a teacher, a student asks why some media shows gun violence even if nothing happened locally.",
-        "goal": "Discuss media literacy and emotional coping."
+        "goal": "Explain briefly and provide context."
     },
     {
         "id": 41,
         "scenario": "As a teacher, a student asks what to do if they feel scared about past incidents.",
-        "goal": "Provide reassurance and coping strategies."
+        "goal": "Offer a calm, simple suggestion."
     },
     {
         "id": 42,
         "scenario": "As a teacher, a student expresses curiosity about why gun violence happens in general.",
-        "goal": "Answer neutrally, focusing on safety and understanding."
+        "goal": "Respond calmly and clearly."
     },
     {
         "id": 43,
         "scenario": "As a teacher, a student asks how to help friends who are anxious about gun violence.",
-        "goal": "Teach empathy and peer support skills."
+        "goal": "Give gentle guidance for support."
     },
     {
         "id": 44,
         "scenario": "As a teacher, a student expresses worry after hearing about a past shooting in another city.",
-        "goal": "Provide reassurance and perspective."
+        "goal": "Offer calm context and reassurance."
     },
     {
         "id": 45,
         "scenario": "As a teacher, a student wants to talk about their feelings regarding past incidents.",
-        "goal": "Support emotional processing and coping strategies."
+        "goal": "Invite them to share freely."
     },
     {
         "id": 46,
         "scenario": "As a teacher, a student asks why people sometimes feel unsafe around guns, even if nothing happened recently.",
-        "goal": "Provide neutral explanation focusing on safety."
+        "goal": "Give a simple, calm answer."
     },
     {
         "id": 47,
         "scenario": "As a teacher, a student expresses sadness after hearing a story about someone affected by gun violence.",
-        "goal": "Support emotional processing and resilience."
+        "goal": "Acknowledge and reflect back their feelings."
     },
     {
         "id": 48,
         "scenario": "As a teacher, a student asks why some people react strongly to news about gun violence.",
-        "goal": "Normalize emotional responses and provide reassurance."
+        "goal": "Explain simply that reactions vary."
     },
     {
         "id": 49,
         "scenario": "As a teacher, a student asks how to feel safe while discussing past incidents.",
-        "goal": "Provide coping strategies and reassurance."
-    },
-    {
-        "id": 50,
-        "scenario": "As a teacher, a student expresses fear after hearing about gun violence in their community in the past.",
-        "goal": "Help the student feel safe and manage emotions."
+        "goal": "Provide simple reassurance and context."
     }
 ]

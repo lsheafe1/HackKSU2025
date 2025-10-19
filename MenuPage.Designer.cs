@@ -52,22 +52,22 @@
             // uxTip
             // 
             uxTip.AutoSize = true;
-            uxTip.Font = new Font("Power Calm", 21.7499962F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            uxTip.Font = new Font("Cooper Black", 21.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             uxTip.ForeColor = Color.SlateGray;
             uxTip.Location = new Point(350, 325);
             uxTip.Name = "uxTip";
-            uxTip.Size = new Size(325, 35);
+            uxTip.Size = new Size(334, 34);
             uxTip.TabIndex = 3;
             uxTip.Text = "Select a mode to begin";
             // 
             // uxTitle
             // 
             uxTitle.AutoSize = true;
-            uxTitle.Font = new Font("Power Calm", 71.99999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            uxTitle.Font = new Font("Cooper Black", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxTitle.ForeColor = Color.CadetBlue;
             uxTitle.Location = new Point(222, 134);
             uxTitle.Name = "uxTitle";
-            uxTitle.Size = new Size(611, 116);
+            uxTitle.Size = new Size(599, 110);
             uxTitle.TabIndex = 2;
             uxTitle.Text = "SafeSpeech";
             uxTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -91,7 +91,7 @@
             uxStartParent.Cursor = Cursors.Hand;
             uxStartParent.Dock = DockStyle.Fill;
             uxStartParent.FlatStyle = FlatStyle.Flat;
-            uxStartParent.Font = new Font("Power Calm", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            uxStartParent.Font = new Font("Cooper Black", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxStartParent.ForeColor = Color.Azure;
             uxStartParent.Location = new Point(50, 50);
             uxStartParent.Margin = new Padding(50);
@@ -109,7 +109,7 @@
             uxStartTeacher.Cursor = Cursors.Hand;
             uxStartTeacher.Dock = DockStyle.Fill;
             uxStartTeacher.FlatStyle = FlatStyle.Flat;
-            uxStartTeacher.Font = new Font("Power Calm", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            uxStartTeacher.Font = new Font("Cooper Black", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxStartTeacher.ForeColor = Color.Azure;
             uxStartTeacher.Location = new Point(418, 50);
             uxStartTeacher.Margin = new Padding(0, 50, 50, 50);

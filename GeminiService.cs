@@ -30,7 +30,7 @@ public class GeminiService
         {
             Temperature = 1.4f
         });
-        wordsModel = googleAI.CreateGenerativeModel("models/gemini-2.5-flash-lite", new GenerationConfig
+        wordsModel = googleAI.CreateGenerativeModel("models/gemini-2.5-flash", new GenerationConfig
         {
             Temperature = .7f
         });
@@ -42,9 +42,7 @@ public class GeminiService
     {
         try
         {
-            scenarioPage.WaitAI();
             var response = await chatSession.GenerateContentAsync(prompt);
-            scenarioPage.StopWaitAI();
 
             return response.Text;
 
@@ -59,9 +57,7 @@ public class GeminiService
     {
         try
         {
-            scenarioPage.WaitAI();
             var response = await chatSession.GenerateContentAsync(prompt);
-            scenarioPage.StopWaitAI();
             Debug.WriteLine("Goal: " + response.Text);
             return bool.Parse(response.Text);
 
@@ -76,9 +72,7 @@ public class GeminiService
     {
         try
         {
-            scenarioPage.WaitAI();
             var response = await wordsModel.GenerateContentAsync(prompt);
-            scenarioPage.StopWaitAI();
 
             return response.Text;
 
@@ -93,9 +87,7 @@ public class GeminiService
     {
         try
         {
-            scenarioPage.WaitAI();
             var response = await model.GenerateContentAsync(prompt);
-            scenarioPage.StopWaitAI();
 
             return response.Text;
 
@@ -120,9 +112,7 @@ public class GeminiService
         Debug.WriteLine(prompt);
         try
         {
-            scenarioPage.WaitAI();
             var response = await chatSession.GenerateContentAsync(prompt);
-            scenarioPage.StopWaitAI();
 
             return response.Text;
 
@@ -136,7 +126,6 @@ public class GeminiService
     public async Task<Dictionary<string, string>> GetHarmfulWords(string prompt, string userText)
     {
         System.Diagnostics.Debug.WriteLine("Getting harmful words");
-        scenarioPage.WaitAI();
 
         string output = await GenerateMessage(prompt + GetHistory() + "THIS NEXT IS THE USER INPUT, ONLY RETURN HARMFUL WORDS FROM HERE:\n" + userText);
         if (string.IsNullOrWhiteSpace(output))

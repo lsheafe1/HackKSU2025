@@ -45,7 +45,7 @@
             uxButtonContainer.Location = new Point(22, 14);
             uxButtonContainer.Margin = new Padding(3, 100, 3, 3);
             uxButtonContainer.Name = "uxButtonContainer";
-            uxButtonContainer.Size = new Size(224, 65);
+            uxButtonContainer.Size = new Size(242, 66);
             uxButtonContainer.TabIndex = 3;
             // 
             // uxBack
@@ -55,12 +55,12 @@
             uxBack.BackColor = Color.CadetBlue;
             uxBack.Cursor = Cursors.Hand;
             uxBack.FlatStyle = FlatStyle.Flat;
-            uxBack.Font = new Font("Microsoft Sans Serif", 21.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            uxBack.Font = new Font("Cooper Black", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxBack.ForeColor = Color.Azure;
             uxBack.Location = new Point(10, 10);
             uxBack.Margin = new Padding(10);
             uxBack.Name = "uxBack";
-            uxBack.Size = new Size(99, 45);
+            uxBack.Size = new Size(107, 46);
             uxBack.TabIndex = 0;
             uxBack.Text = "Menu";
             uxBack.UseVisualStyleBackColor = false;
@@ -73,12 +73,12 @@
             uxNew.BackColor = Color.CadetBlue;
             uxNew.Cursor = Cursors.Hand;
             uxNew.FlatStyle = FlatStyle.Flat;
-            uxNew.Font = new Font("Microsoft Sans Serif", 21.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            uxNew.Font = new Font("Cooper Black", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             uxNew.ForeColor = Color.Azure;
-            uxNew.Location = new Point(129, 10);
+            uxNew.Location = new Point(137, 10);
             uxNew.Margin = new Padding(10);
             uxNew.Name = "uxNew";
-            uxNew.Size = new Size(85, 45);
+            uxNew.Size = new Size(95, 46);
             uxNew.TabIndex = 1;
             uxNew.Text = "New";
             uxNew.UseVisualStyleBackColor = false;
@@ -99,11 +99,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.CadetBlue;
             label1.Location = new Point(440, 57);
             label1.Name = "label1";
-            label1.Size = new Size(123, 32);
+            label1.Size = new Size(131, 27);
             label1.TabIndex = 5;
             label1.Text = "Summary";
             // 
