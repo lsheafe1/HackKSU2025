@@ -1,153 +1,252 @@
 [
     {
-        "id": 51,
-        "scenario": "Your child heard about a school shooting from a classmate.",
-        "goal": "Help them process the news and answer questions calmly."
+        "id": 1,
+        "scenario": "As a parent, your child tells you they are scared after hearing about gun violence on the news.",
+        "goal": "Help your child process the news and feel safe."
     },
     {
-        "id": 52,
-        "scenario": "Your child asks about a shooting they saw on TV.",
-        "goal": "Explain what happened in an age-appropriate way."
+        "id": 2,
+        "scenario": "As a parent, your child asks why people hurt others with guns in general.",
+        "goal": "Answer calmly and focus on safety and empathy."
     },
     {
-        "id": 53,
-        "scenario": "Your child worries every time there’s a loud noise outside.",
-        "goal": "Teach strategies to manage anxiety."
+        "id": 3,
+        "scenario": "As a parent, your child shares that they lost a family member or friend to gun violence.",
+        "goal": "Support your child’s grief and coping strategies."
     },
     {
-        "id": 54,
-        "scenario": "Your child heard a friend talk about guns at school.",
-        "goal": "Clarify any misconceptions and talk about safety."
+        "id": 4,
+        "scenario": "As a parent, your child expresses fear after seeing a violent video involving guns online.",
+        "goal": "Help them distinguish fiction from reality and manage fear."
     },
     {
-        "id": 55,
-        "scenario": "Your teen is curious about why people carry guns.",
-        "goal": "Discuss reasons in a factual and safe way."
+        "id": 5,
+        "scenario": "As a parent, your child tells you they are worried about themselves or others even though nothing happened at school.",
+        "goal": "Provide reassurance and teach coping strategies."
     },
     {
-        "id": 56,
-        "scenario": "Your child asks if they are safe at school after a nearby shooting.",
-        "goal": "Provide reassurance and explain safety measures."
+        "id": 6,
+        "scenario": "As a parent, your child asks why some people carry guns.",
+        "goal": "Provide a simple, neutral explanation focusing on rules and safety."
     },
     {
-        "id": 57,
-        "scenario": "Your child heard gunshots from a distance while playing outside.",
-        "goal": "Teach immediate safety and coping strategies."
+        "id": 7,
+        "scenario": "As a parent, your child wants to talk about how a community member was affected by gun violence.",
+        "goal": "Support discussion and emotional processing."
     },
     {
-        "id": 58,
-        "scenario": "Your child is scared after hearing a gun-related story from a friend.",
-        "goal": "Help them distinguish fact from rumor."
+        "id": 8,
+        "scenario": "As a parent, your child shares that they feel nervous when hearing news about gun violence.",
+        "goal": "Help your child process feelings and feel safe."
     },
     {
-        "id": 59,
-        "scenario": "Your child asks why people use guns to hurt others.",
-        "goal": "Discuss violence, empathy, and conflict resolution."
+        "id": 9,
+        "scenario": "As a parent, your child asks why the news talks so much about shootings.",
+        "goal": "Explain media coverage simply and reassure them."
     },
     {
-        "id": 60,
-        "scenario": "Your child keeps asking questions after seeing a news story about a shooting.",
-        "goal": "Provide honest, age-appropriate answers."
+        "id": 10,
+        "scenario": "As a parent, your child wants to write a school assignment about gun safety and asks for guidance.",
+        "goal": "Encourage safe and thoughtful expression."
     },
     {
-        "id": 61,
-        "scenario": "Your teen saw a news clip about gun violence online.",
-        "goal": "Help them process media safely and calmly."
+        "id": 11,
+        "scenario": "As a parent, your child talks about a friend who witnessed gun violence in the past.",
+        "goal": "Support emotional processing and empathy."
     },
     {
-        "id": 62,
-        "scenario": "Your child is worried after hearing about a robbery involving a gun.",
-        "goal": "Explain the situation and discuss safety practices."
+        "id": 12,
+        "scenario": "As a parent, your child expresses fear after hearing about gun violence in a movie or TV show.",
+        "goal": "Help them distinguish fiction from reality."
     },
     {
-        "id": 63,
-        "scenario": "Your child overheard adults talking about a shooting in the neighborhood.",
-        "goal": "Answer questions and provide reassurance."
+        "id": 13,
+        "scenario": "As a parent, your child asks if it’s normal to feel anxious after hearing news of shootings.",
+        "goal": "Normalize emotions and discuss coping strategies."
     },
     {
-        "id": 64,
-        "scenario": "Your child heard about a shooting in another city and is scared.",
-        "goal": "Explain the difference between local and distant events."
+        "id": 14,
+        "scenario": "As a parent, your child asks why some kids joke about guns.",
+        "goal": "Explain seriousness and encourage safe behavior."
     },
     {
-        "id": 65,
-        "scenario": "Your child asks if people can hurt them with a gun at school.",
-        "goal": "Discuss safety rules and emergency procedures."
+        "id": 15,
+        "scenario": "As a parent, your child shares they have questions about what happened to someone affected by gun violence.",
+        "goal": "Provide factual, age-appropriate answers and reassurance."
     },
     {
-        "id": 66,
-        "scenario": "Your child asks why some kids talk about guns at school.",
-        "goal": "Clarify what’s safe and what isn’t."
+        "id": 16,
+        "scenario": "As a parent, your child asks how to support a friend who is grieving due to gun violence.",
+        "goal": "Give guidance on empathy and healthy support."
     },
     {
-        "id": 67,
-        "scenario": "Your child is worried after hearing gunfire during a parade or community event.",
-        "goal": "Teach how to stay safe and manage fear."
+        "id": 17,
+        "scenario": "As a parent, your child expresses fear after hearing about a past incident that happened in another city.",
+        "goal": "Help them process the story and feel safe."
     },
     {
-        "id": 68,
-        "scenario": "Your teen heard about a shooting from a social media post.",
-        "goal": "Help them verify information and discuss feelings."
+        "id": 18,
+        "scenario": "As a parent, your child asks why people sometimes feel unsafe around guns.",
+        "goal": "Provide a neutral explanation focusing on safety and awareness."
     },
     {
-        "id": 69,
-        "scenario": "Your child heard a neighbor talking about a gun incident nearby.",
-        "goal": "Answer questions and reassure them about safety."
+        "id": 19,
+        "scenario": "As a parent, your child shares feelings of sadness after learning that someone they know experienced gun violence.",
+        "goal": "Offer emotional support and coping strategies."
     },
     {
-        "id": 70,
-        "scenario": "Your child asks if guns are everywhere.",
-        "goal": "Explain how common or uncommon guns are in safe ways."
+        "id": 20,
+        "scenario": "As a parent, your child wants to discuss gun safety as part of a school project.",
+        "goal": "Guide them to discuss the topic responsibly and safely."
     },
     {
-        "id": 71,
-        "scenario": "Your child is scared to play outside after hearing about a local shooting.",
-        "goal": "Teach safety and coping strategies."
+        "id": 21,
+        "scenario": "As a parent, your child asks why guns can be dangerous even if no one is using them right now.",
+        "goal": "Explain risks and safety considerations in a non-alarming way."
     },
     {
-        "id": 72,
-        "scenario": "Your child asks why some people feel the need to carry guns.",
-        "goal": "Discuss context, safety, and empathy."
+        "id": 22,
+        "scenario": "As a parent, your child expresses worry about what might happen in general, not at school.",
+        "goal": "Provide reassurance and teach coping strategies."
     },
     {
-        "id": 73,
-        "scenario": "Your teen wants to talk about gun violence they heard about online.",
-        "goal": "Encourage open and safe discussion."
+        "id": 23,
+        "scenario": "As a parent, your child asks about how families cope after losing someone to gun violence.",
+        "goal": "Discuss grief and resilience in an age-appropriate way."
     },
     {
-        "id": 74,
-        "scenario": "Your child overheard classmates talking about bringing guns to school.",
-        "goal": "Discuss safety, rules, and when to alert adults."
+        "id": 24,
+        "scenario": "As a parent, your child asks why some people talk about guns even if nothing happened.",
+        "goal": "Explain social behavior and the importance of responsible conversation."
     },
     {
-        "id": 75,
-        "scenario": "Your child is anxious after hearing gunshots in a movie.",
-        "goal": "Distinguish fiction from reality and manage fears."
+        "id": 25,
+        "scenario": "As a parent, your child shares that hearing about past shootings makes them feel unsafe in general.",
+        "goal": "Provide reassurance and discuss coping techniques."
     },
     {
-        "id": 76,
-        "scenario": "Your child asks why police use guns sometimes.",
-        "goal": "Explain context and safety in an age-appropriate way."
+        "id": 26,
+        "scenario": "As a parent, your child wants to write a story about gun violence and asks how to do it responsibly.",
+        "goal": "Encourage safe, thoughtful expression and reflection."
     },
     {
-        "id": 77,
-        "scenario": "Your child heard about a shooting at a nearby mall.",
-        "goal": "Clarify facts and reassure them about safety."
+        "id": 27,
+        "scenario": "As a parent, your child asks why some people react strongly to news about guns.",
+        "goal": "Explain emotional responses and normalize feelings."
     },
     {
-        "id": 78,
-        "scenario": "Your child heard a story from a friend about someone being shot.",
-        "goal": "Help them process and discuss emotions."
+        "id": 28,
+        "scenario": "As a parent, your child asks how to talk to younger siblings about past gun violence safely.",
+        "goal": "Provide guidance on age-appropriate communication."
     },
     {
-        "id": 79,
-        "scenario": "Your child asks why news shows focus so much on shootings.",
-        "goal": "Explain media coverage and provide reassurance."
+        "id": 29,
+        "scenario": "As a parent, your child expresses anxiety after hearing about past incidents in the community.",
+        "goal": "Help them manage anxiety and feel safe."
     },
     {
-        "id": 80,
-        "scenario": "Your child is worried about going to a public event after hearing about a shooting.",
-        "goal": "Discuss safety and coping strategies."
+        "id": 30,
+        "scenario": "As a parent, your child asks why people carry guns even when they don’t need them.",
+        "goal": "Provide a neutral explanation focusing on safety and rules."
+    },
+    {
+        "id": 31,
+        "scenario": "As a parent, your child wants to discuss news stories about gun violence and asks how to handle them.",
+        "goal": "Teach responsible media discussion and coping strategies."
+    },
+    {
+        "id": 32,
+        "scenario": "As a parent, your child expresses concern about friends who may be anxious about past gun violence.",
+        "goal": "Guide supportive peer interaction and empathy."
+    },
+    {
+        "id": 33,
+        "scenario": "As a parent, your child asks what it means when someone talks about being afraid of guns.",
+        "goal": "Explain fear and coping strategies."
+    },
+    {
+        "id": 34,
+        "scenario": "As a parent, your child asks why some families talk about past incidents of gun violence.",
+        "goal": "Explain in a neutral, age-appropriate way."
+    },
+    {
+        "id": 35,
+        "scenario": "As a parent, your child wants to write a reflection on how gun violence affects communities.",
+        "goal": "Encourage safe expression and discussion of feelings."
+    },
+    {
+        "id": 36,
+        "scenario": "As a parent, your child asks how to feel safe after hearing news about gun violence in general.",
+        "goal": "Teach reassurance techniques and coping strategies."
+    },
+    {
+        "id": 37,
+        "scenario": "As a parent, your child shares they feel anxious after reading about a past incident.",
+        "goal": "Help them process anxiety and normalize feelings."
+    },
+    {
+        "id": 38,
+        "scenario": "As a parent, your child asks why some people are affected by gun violence more than others.",
+        "goal": "Discuss trauma and resilience in an age-appropriate way."
+    },
+    {
+        "id": 39,
+        "scenario": "As a parent, your child expresses concern about friends who are scared after hearing about gun violence.",
+        "goal": "Provide guidance on supporting peers safely."
+    },
+    {
+        "id": 40,
+        "scenario": "As a parent, your child asks why some media shows gun violence even if nothing happened locally.",
+        "goal": "Discuss media literacy and emotional coping."
+    },
+    {
+        "id": 41,
+        "scenario": "As a parent, your child asks what to do if they feel scared about past incidents.",
+        "goal": "Provide reassurance and coping strategies."
+    },
+    {
+        "id": 42,
+        "scenario": "As a parent, your child expresses curiosity about why gun violence happens in general.",
+        "goal": "Answer neutrally, focusing on safety and understanding."
+    },
+    {
+        "id": 43,
+        "scenario": "As a parent, your child asks how to help friends who are anxious about gun violence.",
+        "goal": "Teach empathy and peer support skills."
+    },
+    {
+        "id": 44,
+        "scenario": "As a parent, your child expresses worry after hearing about a past shooting in another city.",
+        "goal": "Provide reassurance and perspective."
+    },
+    {
+        "id": 45,
+        "scenario": "As a parent, your child wants to talk about their feelings regarding past incidents.",
+        "goal": "Support emotional processing and coping strategies."
+    },
+    {
+        "id": 46,
+        "scenario": "As a parent, your child asks why people sometimes feel unsafe around guns, even if nothing happened recently.",
+        "goal": "Provide neutral explanation focusing on safety."
+    },
+    {
+        "id": 47,
+        "scenario": "As a parent, your child expresses sadness after hearing a story about someone affected by gun violence.",
+        "goal": "Support emotional processing and resilience."
+    },
+    {
+        "id": 48,
+        "scenario": "As a parent, your child asks why some people react strongly to news about gun violence.",
+        "goal": "Normalize emotional responses and provide reassurance."
+    },
+    {
+        "id": 49,
+        "scenario": "As a parent, your child asks how to feel safe while discussing past incidents.",
+        "goal": "Provide coping strategies and reassurance."
+    },
+    {
+        "id": 50,
+        "scenario": "As a parent, your child expresses fear after hearing about gun violence in their community in the past.",
+        "goal": "Help your child feel safe and manage emotions."
     }
 ]
-

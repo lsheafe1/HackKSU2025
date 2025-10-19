@@ -138,7 +138,7 @@ public class GeminiService
         System.Diagnostics.Debug.WriteLine("Getting harmful words");
         scenarioPage.WaitAI();
 
-        string output = await GenerateMessage(prompt + GetHistory() + "THIS IS THE USER INPUT, GET HARMFUL  WORDS HERE\n" + userText);
+        string output = await GenerateMessage(prompt + GetHistory() + "THIS NEXT IS THE USER INPUT, ONLY RETURN HARMFUL WORDS FROM HERE:\n" + userText);
         if (string.IsNullOrWhiteSpace(output))
             return new Dictionary<string, string>();
         string json = ExtractJson(output);

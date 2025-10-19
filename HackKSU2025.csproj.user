@@ -13,5 +13,8 @@
     <Compile Update="ScenarioPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="SummaryPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

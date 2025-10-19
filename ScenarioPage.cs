@@ -35,6 +35,7 @@ namespace HackKSU2025
         ScenarioManager scenarioManager;
         ScenarioType scenarioType;
         AudioRecorder audioRecorder = new();
+        int userMessages = 0;
 
 
         public ScenarioPage(ScenarioType scenarioType)
@@ -58,7 +59,7 @@ namespace HackKSU2025
             toolTip = new ToolTip();
             toolTip.AutoPopDelay = 5000;
             toolTip.InitialDelay = 10;
-            toolTip.ReshowDelay = 10;
+            //toolTip.ReshowDelay = 10000;
             toolTip.ShowAlways = true;
         }
         private async void InitializeScenario(ScenarioType type)
@@ -70,26 +71,30 @@ namespace HackKSU2025
             Debug.WriteLine("Goal: " + scenario.Goal);
 
             gemini = new GeminiService(this);
+
             string text = await gemini.InitializeConversation(startingPrompt + "Scenario: " + scenario.ScenarioText + "Goal: " + scenario.Goal);
             AppendStartingMessage(text);
 
         }
         public void AppendAIMessage(string text)
         {
-            uxMessageBox.AppendText("\n");
+            uxMessageBox.AppendText("\n\n");
 
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
-            uxMessageBox.AppendText(text);
+            uxMessageBox.AppendText(text.Trim());
             uxMessageBox.SelectionStart = uxMessageBox.TextLength;
             uxMessageBox.ScrollToCaret();
-            CheckGoal();
+            if (userMessages > 2)
+            {
+                CheckGoal();
+            }
         }
         public void AppendStartingMessage(string text)
         {
 
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
             uxMessageBox.AppendText(text);
-            uxMessageBox.AppendText("\n");
+
 
         }
 
@@ -98,7 +103,8 @@ namespace HackKSU2025
 
         public void AppendUserMessage(string text, Dictionary<string, string> harmfulWordsWithReason)
         {
-            uxMessageBox.AppendText("\n");
+            userMessages++;
+            uxMessageBox.AppendText("\n\n");
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Right;
             uxMessageBox.AppendText("User: ");
 
@@ -135,7 +141,6 @@ namespace HackKSU2025
                 currentLineLength += word.Length + 1;
             }
 
-            uxMessageBox.AppendText("\n");
             uxMessageBox.SelectionStart = uxMessageBox.TextLength;
             uxMessageBox.ScrollToCaret();
 
@@ -186,8 +191,8 @@ namespace HackKSU2025
             string text = uxUserText.Text.Trim();
             uxUserText.Text = null;
             string aiMessage = await gemini.GenerateChatMessage("Below is the users response. Please roleplay as the other person described in the scenario. Remember, you are roleplaying as the" +
-                "person who needs help from the user. User: "+ text);
-            string advice = await gemini.GenerateAdvice("Based on this conversation history, speak directly to the user and give some advice on how to approach what they say next. Keep in mind the goal of the conversation, but dont explicitaly state it. Be subtle and guiding, and keep the advice simple and short. HISTORY: ");
+                "person who needs help from the user. Try to follow the prompt, but dont repeatedly question the user about the same thing. User: "+ text);
+            string advice = await gemini.GenerateAdvice("Based on this conversation history, speak directly to the user and give some advice on how to approach what they say next. Keep in mind the goal of the conversation, but dont explicitaly state it. Guide them towards that goal, and keep the advice simple and short. If need be, comment on something the user shouldnt have said or said differently. HISTORY: ");
             AppendUserMessage(text, await GetHarmfulWords(text));
             AppendAIMessage(aiMessage);
             uxAdvice.Text = "Advice: " + advice;
@@ -237,7 +242,13 @@ namespace HackKSU2025
             bool goal = await gemini.CheckGoal(goalPrompt);
             if (goal)
             {
-                MessageBox.Show("Goal achieved!");
+                MessageBox.Show("You have passed the scenario! Press ok to see your summary.");
+                MainForm? main = this.FindForm() as MainForm;
+                if (main != null)
+                {
+                    WaitAI();
+                    main.LoadPage(new SummaryPage(scenarioType, await gemini.GenerateAdvice("Based on this conversation, give a paragraph of advice on how the user approached the sitation and what they could do better, and praise what they did good. Keep the language easy to understand.")));
+                }
             }
         }
 

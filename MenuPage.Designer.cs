@@ -65,11 +65,11 @@
             uxTitle.AutoSize = true;
             uxTitle.Font = new Font("Power Calm", 71.99999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             uxTitle.ForeColor = Color.CadetBlue;
-            uxTitle.Location = new Point(277, 118);
+            uxTitle.Location = new Point(222, 134);
             uxTitle.Name = "uxTitle";
-            uxTitle.Size = new Size(471, 116);
+            uxTitle.Size = new Size(611, 116);
             uxTitle.TabIndex = 2;
-            uxTitle.Text = "SafeTalk";
+            uxTitle.Text = "SafeSpeech";
             uxTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // uxButtonContainer

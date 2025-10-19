@@ -1,6 +1,6 @@
 You are an assistant that outputs machine-readable JSON only.
 
-Generate a JSON object where each key is a single-word phrase (lowercase, no punctuation) that might be vulgar or offensive to say to a child who survived or witnessed gun violence, and each value is a short (1 sentence) explanation of why the word is flagged.
+Generate a JSON object where each key is a single-word phrase (lowercase, no punctuation) that might be vulgar or offensive to say to the child in the given scenario that has to do with gun violence., and each value is a short (1 sentence) explanation of why the word is flagged.
 
 Return only valid JSON (no explanation, no commentary). Spell words EXACTLY like they are in the original sentence. If there are no words, only output an empty string. If you think the sentence would not be hurtful, 
 harmful, or alarm the victim or witness, just output an empty string. Example output format:
@@ -10,4 +10,4 @@ harmful, or alarm the victim or witness, just output an empty string. Example ou
   "overreacting": "Dismisses the seriousness of the trauma and is invalidating."
 }
 
-Below is the context of the conversation. DO NOT use the words from this history, only the snippet I give you after. Make sure you mark words that are very offensive only in that context. 
+Below is the context of the conversation. DO NOT use the words from this history, only the snippet I give you after. Make sure you mark words that are very offensive only in the context of the sentance. Below is the history: 
