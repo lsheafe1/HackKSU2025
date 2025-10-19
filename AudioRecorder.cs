@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using NAudio.Wave;
 
 public class AudioRecorder
@@ -9,15 +10,19 @@ public class AudioRecorder
     private WaveFileWriter writer;
     private bool isRecording = false;
     private string outputFilePath;
+    private TaskCompletionSource<bool> recordingStoppedTcs;
 
     public string OutputFilePath => outputFilePath;
     public bool IsRecording => isRecording;
 
+    /// <summary>
+    /// Starts recording from the default microphone.
+    /// </summary>
     public void StartRecording()
     {
         if (isRecording) return;
 
-        outputFilePath = Path.Combine(Path.GetTempPath(), "audio.mp3");
+        outputFilePath = Path.Combine(Path.GetTempPath(), "audio.wav");
         waveIn = new WaveInEvent();
         writer = new WaveFileWriter(outputFilePath, waveIn.WaveFormat);
 
@@ -25,11 +30,12 @@ public class AudioRecorder
         {
             writer.Write(a.Buffer, 0, a.BytesRecorded);
         };
-            
+
         waveIn.RecordingStopped += (s, a) =>
         {
             writer?.Dispose();
             waveIn?.Dispose();
+            recordingStoppedTcs?.TrySetResult(true);
             Debug.WriteLine($"Recording saved to {outputFilePath}");
         };
 
@@ -38,12 +44,18 @@ public class AudioRecorder
         Debug.WriteLine("Recording started...");
     }
 
-    public void StopRecording()
+    /// <summary>
+    /// Stops the recording and waits until the file is safely written.
+    /// </summary>
+    public async Task StopRecordingAsync()
     {
         if (!isRecording) return;
 
-        waveIn.StopRecording();
+        recordingStoppedTcs = new TaskCompletionSource<bool>();
+        waveIn.StopRecording(); // triggers RecordingStopped
+        await recordingStoppedTcs.Task; // wait until file finalized
+
         isRecording = false;
-        Debug.WriteLine("Recording stopped.");
+        Debug.WriteLine("Recording stopped and file finalized.");
     }
 }

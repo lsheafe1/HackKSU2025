@@ -33,11 +33,13 @@ namespace HackKSU2025
         static string wordFilterPrompt;
         static string goalPrompt;
         ScenarioManager scenarioManager;
+        ScenarioType scenarioType;
         AudioRecorder audioRecorder = new();
 
 
         public ScenarioPage(ScenarioType scenarioType)
         {
+            this.scenarioType = scenarioType;
             InitializeComponent();
             InitializeToolTip();
             InitializeScenario(scenarioType);
@@ -97,11 +99,12 @@ namespace HackKSU2025
         public void AppendUserMessage(string text, Dictionary<string, string> harmfulWordsWithReason)
         {
             uxMessageBox.AppendText("\n");
-
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Right;
             uxMessageBox.AppendText("User: ");
 
             string[] words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            int lineLength = uxMessageBox.TextLength; 
+            int maxLineLength = 25; 
 
             foreach (string word in words)
             {
@@ -110,6 +113,7 @@ namespace HackKSU2025
                 // Remove any leading/trailing punctuation and lowercase
                 string cleanWord = Regex.Replace(word, @"^\W+|\W+$", "").ToLowerInvariant();
 
+                // Set color for harmful words
                 if (harmfulWordsWithReason.ContainsKey(cleanWord))
                 {
                     uxMessageBox.SelectionColor = Color.Red;
@@ -120,17 +124,26 @@ namespace HackKSU2025
                     uxMessageBox.SelectionColor = Color.Black;
                 }
 
+                // Check if adding this word exceeds max line length
+                if ((lineLength + word.Length + 1) > maxLineLength) // +1 for space
+                {
+                    uxMessageBox.AppendText("\n");
+                    lineLength = 0;
+                }
+
                 uxMessageBox.AppendText(word + " ");
+                lineLength += word.Length + 1;
             }
 
-            //uxMessageBox.AppendText("\n");
             uxMessageBox.SelectionStart = uxMessageBox.TextLength;
             uxMessageBox.ScrollToCaret();
+
             foreach (var dic in harmfulWordsWithReason)
             {
                 Debug.WriteLine($"Key: {dic.Key}");
             }
         }
+
 
         private async Task<Dictionary<string, string>> GetHarmfulWords(string text)
         {
@@ -170,18 +183,28 @@ namespace HackKSU2025
         }
         private async void UserInput()
         {
+            string text = uxUserText.Text.Trim();
+            uxUserText.Text = "";
             string str = await gemini.GenerateChatMessage("Below is the users response. Please roleplay as the other person described in the scenario. Remember, you are roleplaying as the" +
-                "person who needs help from the user. User: "+uxUserText.Text);
-            AppendUserMessage(uxUserText.Text, await GetHarmfulWords(uxUserText.Text));
+                "person who needs help from the user. User: "+ text);
+            AppendUserMessage(text, await GetHarmfulWords(text));
             AppendAIMessage(str);
         }
         public void WaitAI()
         {
             uxSpinner.Visible = true;
+            uxSendButton.Enabled = false;
+            uxSendButton.BackColor = Color.Gray;
+            uxRecordButton.BackColor = Color.Gray;
+
         }
         public void StopWaitAI()
         {
             uxSpinner.Visible = false;
+            uxSendButton.Enabled = true;
+            uxSendButton.BackColor = Color.AntiqueWhite;
+            uxRecordButton.BackColor = Color.AntiqueWhite;
+
         }
         private void uxBackClick(object sender, EventArgs e)
         {
@@ -196,7 +219,7 @@ namespace HackKSU2025
             MainForm? main = this.FindForm() as MainForm;
             if (main != null)
             {
-                main.LoadPage(new ScenarioPage(ScenarioType.Parent));
+                main.LoadPage(new ScenarioPage(scenarioType));
             }
         }
         private async void ScenarioPageLoad(object sender, EventArgs e)
@@ -212,7 +235,7 @@ namespace HackKSU2025
             }
         }
 
-        private void uxRecordClick(object sender, EventArgs e)
+        private async void uxRecordClick(object sender, EventArgs e)
         {
             if(!audioRecorder.IsRecording)
             {
@@ -227,7 +250,8 @@ namespace HackKSU2025
             }
             else
             {
-                audioRecorder.StopRecording();
+                await audioRecorder.StopRecordingAsync();
+                uxUserText.Text = ElevenLabsService.Transcribe();
             }
         }
     }

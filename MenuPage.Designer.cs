@@ -118,6 +118,7 @@
             uxStartTeacher.TabIndex = 1;
             uxStartTeacher.Text = "Teacher";
             uxStartTeacher.UseVisualStyleBackColor = false;
+            uxStartTeacher.Click += uxTeacherClick;
             // 
             // MenuPage
             // 

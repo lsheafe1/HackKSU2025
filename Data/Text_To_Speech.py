@@ -4,6 +4,7 @@ from io import BytesIO
 from dotenv import load_dotenv
 import requests
 from elevenlabs.client import ElevenLabs
+import tempfile
 
 
 load_dotenv()
@@ -17,7 +18,7 @@ audio_url = (
 response = requests.get(audio_url)
 audio_data = BytesIO(response.content)
 '''
-file_path = os.path.join("Data", "audio.mp3")
+file_path = os.path.join(tempfile.gettempdir(), "audio.wav")
 with open(file_path, "rb") as f:
     transcription = elevenlabs.speech_to_text.convert(
         file=f,

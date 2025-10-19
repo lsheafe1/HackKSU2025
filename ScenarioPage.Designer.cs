@@ -127,7 +127,7 @@
             uxRecordButton.Name = "uxRecordButton";
             uxRecordButton.Size = new Size(80, 80);
             uxRecordButton.TabIndex = 7;
-            uxRecordButton.UseVisualStyleBackColor = false;
+            uxRecordButton.UseVisualStyleBackColor = true;
             uxRecordButton.Click += uxRecordClick;
             // 
             // uxSpinner

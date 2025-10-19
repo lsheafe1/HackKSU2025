@@ -3,18 +3,18 @@ using System.Diagnostics;
 
 class ElevenLabsService
 {
-    public static void Transcribe()
+    public static string Transcribe()
     {
-        // Path to Python executable
-        string pythonPath = @"C:\Users\Blake Ebner\AppData\Local\Programs\Python\Python312\python.exe";
 
-        // Path to your Python script
-        string scriptPath = @"C:\Users\Blake Ebner\OneDrive\Documents\K-State hackathon\HackKSU2025\Text_To_Speech.py";
+        string pythonPath = GetPythonPath();
+        //string pythonPath = @"C:\Users\Blake Ebner\AppData\Local\Programs\Python\Python312\python.exe";
 
-        // Optional arguments to pass to the Python script
+        string scriptPath = Path.Combine(AppContext.BaseDirectory,"Data", "Text_To_Speech.py");
+
+        //string scriptPath = @"C:\Users\Blake Ebner\OneDrive\Documents\K-State hackathon\HackKSU2025\Text_To_Speech.py";
+
         string arguments = "";
 
-        // Configure process
         ProcessStartInfo start = new ProcessStartInfo();
         start.FileName = pythonPath;
         start.Arguments = $"\"{scriptPath}\" {arguments}";
@@ -34,12 +34,27 @@ class ElevenLabsService
 
             Debug.WriteLine("Python output:");
             Debug.WriteLine(output);
-
             if (!string.IsNullOrEmpty(errors))
             {
                 Debug.WriteLine("Python errors:");
                 Debug.WriteLine(errors);
             }
+            return output;
+
+        }
+        string GetPythonPath()
+        {
+            var psi = new ProcessStartInfo("py", "-c \"import sys;print(sys.executable)\"")
+            {
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+            using var p = Process.Start(psi);
+            string result = p.StandardOutput.ReadToEnd().Trim();
+            p.WaitForExit();
+            return result;
         }
     }
+
 }

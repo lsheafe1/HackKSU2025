@@ -29,14 +29,14 @@ public class ScenarioManager
 
     public void LoadScenarios(ScenarioType type)
     {
-        string jsonPath;
+        string jsonPath = null;
         if (type == ScenarioType.Parent)
         {
             jsonPath = Path.Combine(AppContext.BaseDirectory, "Data", "ParentScenarios.json");
         }
-        else
+        else if (type == ScenarioType.Teacher)
         {
-            jsonPath = Path.Combine(AppContext.BaseDirectory, "Data", "InitialPrompt.txt");
+            jsonPath = Path.Combine(AppContext.BaseDirectory, "Data", "TeacherScenarios.json");
         }
         if (!File.Exists(jsonPath))
             throw new FileNotFoundException($"Scenario file not found: {jsonPath}");

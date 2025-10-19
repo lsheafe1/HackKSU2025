@@ -26,5 +26,13 @@ namespace HackKSU2025
             }
         }
 
+        private void uxTeacherClick(object sender, EventArgs e)
+        {
+            MainForm? main = this.FindForm() as MainForm;
+            if (main != null)
+            {
+                main.LoadPage(new ScenarioPage(ScenarioType.Teacher));
+            }
+        }
     }
 }
