@@ -34,10 +34,10 @@
             uxNew = new Button();
             uxMessageBox = new RichTextBox();
             uxScenarioContainer = new Panel();
+            uxRecordButton = new Button();
             uxSpinner = new PictureBox();
             uxSendButton = new Button();
             uxUserText = new TextBox();
-            button1 = new Button();
             uxButtonContainer.SuspendLayout();
             uxScenarioContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uxSpinner).BeginInit();
@@ -106,7 +106,7 @@
             // 
             // uxScenarioContainer
             // 
-            uxScenarioContainer.Controls.Add(button1);
+            uxScenarioContainer.Controls.Add(uxRecordButton);
             uxScenarioContainer.Controls.Add(uxSpinner);
             uxScenarioContainer.Controls.Add(uxSendButton);
             uxScenarioContainer.Controls.Add(uxUserText);
@@ -117,6 +117,18 @@
             uxScenarioContainer.Name = "uxScenarioContainer";
             uxScenarioContainer.Size = new Size(1024, 768);
             uxScenarioContainer.TabIndex = 4;
+            // 
+            // uxRecordButton
+            // 
+            uxRecordButton.BackColor = Color.White;
+            uxRecordButton.BackgroundImage = (Image)resources.GetObject("uxRecordButton.BackgroundImage");
+            uxRecordButton.BackgroundImageLayout = ImageLayout.Stretch;
+            uxRecordButton.Location = new Point(842, 581);
+            uxRecordButton.Name = "uxRecordButton";
+            uxRecordButton.Size = new Size(80, 80);
+            uxRecordButton.TabIndex = 7;
+            uxRecordButton.UseVisualStyleBackColor = false;
+            uxRecordButton.Click += uxRecordClick;
             // 
             // uxSpinner
             // 
@@ -150,18 +162,6 @@
             uxUserText.TabIndex = 4;
             uxUserText.KeyDown += uxSendEnter;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.White;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(842, 581);
-            button1.Name = "button1";
-            button1.Size = new Size(80, 80);
-            button1.TabIndex = 7;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += uxRecordClick;
-            // 
             // ScenarioPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -189,6 +189,6 @@
         private Button uxSendButton;
         private TextBox uxUserText;
         private PictureBox uxSpinner;
-        private Button button1;
+        private Button uxRecordButton;
     }
 }
