@@ -217,8 +217,8 @@ namespace HackKSU2025
         {
             uxSpinner.Visible = false;
             uxSendButton.Enabled = true;
-            uxSendButton.BackColor = Color.AntiqueWhite;
-            uxRecordButton.BackColor = Color.AntiqueWhite;
+            uxSendButton.BackColor = Color.White;
+            uxRecordButton.BackColor = Color.White;
             uxRecordButton.Enabled = true;
             uxUserText.Enabled = true;
         }
@@ -281,7 +281,7 @@ namespace HackKSU2025
             {
                 uxSpinner.Visible = false;
                 uxSendButton.Enabled = true;
-                uxSendButton.BackColor = Color.AntiqueWhite;
+                uxSendButton.BackColor = Color.White;
                 uxUserText.Enabled = true;
                 byte[] imageBytes = Properties.Resources.Mic_Icon;
 
