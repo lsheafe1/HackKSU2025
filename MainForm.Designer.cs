@@ -53,8 +53,8 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1024, 728);
             Controls.Add(uxPanelContainer);
