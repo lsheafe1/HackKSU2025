@@ -39,7 +39,7 @@
             uxPanelContainer.Dock = DockStyle.Fill;
             uxPanelContainer.Location = new Point(0, 0);
             uxPanelContainer.Name = "uxPanelContainer";
-            uxPanelContainer.Size = new Size(1024, 728);
+            uxPanelContainer.Size = new Size(1024, 768);
             uxPanelContainer.TabIndex = 0;
             // 
             // menuPage1
@@ -48,7 +48,7 @@
             menuPage1.Dock = DockStyle.Fill;
             menuPage1.Location = new Point(0, 0);
             menuPage1.Name = "menuPage1";
-            menuPage1.Size = new Size(1024, 728);
+            menuPage1.Size = new Size(1024, 768);
             menuPage1.TabIndex = 0;
             // 
             // MainForm
@@ -56,8 +56,9 @@
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(1024, 728);
+            ClientSize = new Size(1024, 768);
             Controls.Add(uxPanelContainer);
+            Cursor = Cursors.Default;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "MainForm";
             Text = "SafeTalk";
