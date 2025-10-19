@@ -58,10 +58,9 @@
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1024, 768);
             Controls.Add(uxPanelContainer);
-            Cursor = Cursors.Default;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "MainForm";
-            Text = "SafeTalk";
+            Text = "SafeSpeech";
             uxPanelContainer.ResumeLayout(false);
             ResumeLayout(false);
         }

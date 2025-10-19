@@ -34,12 +34,14 @@
             uxButtonContainer = new FlowLayoutPanel();
             uxStartParent = new Button();
             uxStartTeacher = new Button();
+            label1 = new Label();
             uxMenuPanel.SuspendLayout();
             uxButtonContainer.SuspendLayout();
             SuspendLayout();
             // 
             // uxMenuPanel
             // 
+            uxMenuPanel.Controls.Add(label1);
             uxMenuPanel.Controls.Add(uxTip);
             uxMenuPanel.Controls.Add(uxTitle);
             uxMenuPanel.Controls.Add(uxButtonContainer);
@@ -120,6 +122,17 @@
             uxStartTeacher.UseVisualStyleBackColor = false;
             uxStartTeacher.Click += uxTeacherClick;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Cooper Black", 21.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.SlateGray;
+            label1.Location = new Point(232, 244);
+            label1.Name = "label1";
+            label1.Size = new Size(561, 34);
+            label1.TabIndex = 4;
+            label1.Text = "Empathy starts with the right words";
+            // 
             // MenuPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -143,5 +156,6 @@
         private Label uxTitle;
         private Button uxStartTeacher;
         private Label uxTip;
+        private Label label1;
     }
 }
