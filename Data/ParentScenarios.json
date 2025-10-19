@@ -66,11 +66,6 @@
         "goal": "Offer a simple perspective."
     },
     {
-        "id": 15,
-        "scenario": "As a parent, your child shares they have questions about what happened to someone affected by gun violence.",
-        "goal": "Answer and listen."
-    },
-    {
         "id": 16,
         "scenario": "As a parent, your child asks how to support a friend who is grieving due to gun violence.",
         "goal": "Talk through possibilities."
