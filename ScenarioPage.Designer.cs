@@ -134,7 +134,7 @@
             // 
             uxSpinner.BackColor = Color.Transparent;
             uxSpinner.Image = (Image)resources.GetObject("uxSpinner.Image");
-            uxSpinner.Location = new Point(22, 581);
+            uxSpinner.Location = new Point(933, 667);
             uxSpinner.Name = "uxSpinner";
             uxSpinner.Size = new Size(54, 69);
             uxSpinner.SizeMode = PictureBoxSizeMode.Zoom;

@@ -79,7 +79,6 @@ namespace HackKSU2025
             uxMessageBox.AppendText("\n");
 
             uxMessageBox.SelectionAlignment = HorizontalAlignment.Left;
-            //uxMessageBox.AppendText("AI: ");
             uxMessageBox.AppendText(text);
             uxMessageBox.SelectionStart = uxMessageBox.TextLength;
             uxMessageBox.ScrollToCaret();
@@ -103,17 +102,17 @@ namespace HackKSU2025
             uxMessageBox.AppendText("User: ");
 
             string[] words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            int lineLength = uxMessageBox.TextLength; 
-            int maxLineLength = 25; 
+            int currentLineLength = 0;
+            int maxLineLength = 80;
 
             foreach (string word in words)
             {
                 int start = uxMessageBox.TextLength;
 
-                // Remove any leading/trailing punctuation and lowercase
+                // Clean punctuation for matching
                 string cleanWord = Regex.Replace(word, @"^\W+|\W+$", "").ToLowerInvariant();
 
-                // Set color for harmful words
+                // Choose color
                 if (harmfulWordsWithReason.ContainsKey(cleanWord))
                 {
                     uxMessageBox.SelectionColor = Color.Red;
@@ -124,17 +123,18 @@ namespace HackKSU2025
                     uxMessageBox.SelectionColor = Color.Black;
                 }
 
-                // Check if adding this word exceeds max line length
-                if ((lineLength + word.Length + 1) > maxLineLength) // +1 for space
+                // Check if adding this word exceeds line limit
+                if (currentLineLength + word.Length + 1 > maxLineLength)
                 {
                     uxMessageBox.AppendText("\n");
-                    lineLength = 0;
+                    currentLineLength = 0;
                 }
 
                 uxMessageBox.AppendText(word + " ");
-                lineLength += word.Length + 1;
+                currentLineLength += word.Length + 1;
             }
 
+            uxMessageBox.AppendText("\n");
             uxMessageBox.SelectionStart = uxMessageBox.TextLength;
             uxMessageBox.ScrollToCaret();
 
@@ -143,7 +143,6 @@ namespace HackKSU2025
                 Debug.WriteLine($"Key: {dic.Key}");
             }
         }
-
 
         private async Task<Dictionary<string, string>> GetHarmfulWords(string text)
         {
@@ -196,6 +195,8 @@ namespace HackKSU2025
             uxSendButton.Enabled = false;
             uxSendButton.BackColor = Color.Gray;
             uxRecordButton.BackColor = Color.Gray;
+            uxRecordButton.Enabled = false;
+            uxUserText.Enabled = false;
 
         }
         public void StopWaitAI()
@@ -204,8 +205,10 @@ namespace HackKSU2025
             uxSendButton.Enabled = true;
             uxSendButton.BackColor = Color.AntiqueWhite;
             uxRecordButton.BackColor = Color.AntiqueWhite;
-
+            uxRecordButton.Enabled = true;
+            uxUserText.Enabled = true;
         }
+
         private void uxBackClick(object sender, EventArgs e)
         {
             MainForm? main = this.FindForm() as MainForm;
@@ -239,17 +242,31 @@ namespace HackKSU2025
         {
             if(!audioRecorder.IsRecording)
             {
+                uxSpinner.Visible = true;
+                uxSendButton.Enabled = false;
+                uxSendButton.BackColor = Color.Gray;
+                uxUserText.Enabled = false;
                 audioRecorder.StartRecording();
 
                 byte[] imageBytes = Properties.Resources.End_Icon;
 
                 using (MemoryStream ms = new MemoryStream(imageBytes))
                 {
-                    uxRecordButton.Image = System.Drawing.Image.FromStream(ms);
+                    uxRecordButton.BackgroundImage = System.Drawing.Image.FromStream(ms);
                 }
             }
             else
             {
+                uxSpinner.Visible = false;
+                uxSendButton.Enabled = true;
+                uxSendButton.BackColor = Color.AntiqueWhite;
+                uxUserText.Enabled = true;
+                byte[] imageBytes = Properties.Resources.Mic_Icon;
+
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    uxRecordButton.BackgroundImage = System.Drawing.Image.FromStream(ms);
+                }
                 await audioRecorder.StopRecordingAsync();
                 uxUserText.Text = ElevenLabsService.Transcribe();
             }

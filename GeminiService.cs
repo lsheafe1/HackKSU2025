@@ -26,13 +26,13 @@ public class GeminiService
                   ?? throw new Exception("Set GEMINI_API_KEY environment variable");
         googleAI = new GoogleAi(_apiKey);
 
-        model = googleAI.CreateGenerativeModel("models/gemini-2.5-flash-lite", new GenerationConfig
+        model = googleAI.CreateGenerativeModel("models/gemini-2.5-flash", new GenerationConfig
         {
             Temperature = 1.4f
         });
-        wordsModel = googleAI.CreateGenerativeModel("models/gemini-2.5-flash", new GenerationConfig
+        wordsModel = googleAI.CreateGenerativeModel("models/gemini-2.5-flash-lite", new GenerationConfig
         {
-            Temperature = 1f
+            Temperature = .7f
         });
         chatSession = model.StartChat();
 
